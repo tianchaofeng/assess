@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starsoft.ezicloud.modules.assess.dao.ReQuestionnaireAssessDao">
+    
+	<sql id="reQuestionnaireAssessColumns">
+		a.id AS "id",
+		a.questionnaire_id AS "questionnaireId.id",
+		a.assess_id AS "assessId.id",
+		a.proportion AS "proportion",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag",
+		a.def1 AS "def1",
+		a.def2 AS "def2",
+		a.def3 AS "def3",
+		a.def4 AS "def4",
+		a.def5 AS "def5"
+	</sql>
+	
+	<sql id="reQuestionnaireAssessJoins">
+	LEFT JOIN db_assess_index ai ON ai.id = a.assess_id
+
+	
+	</sql>
+    
+	<select id="get" resultType="ReQuestionnaireAssess">
+		SELECT 
+			<include refid="reQuestionnaireAssessColumns"/>
+		FROM re_questionnaire_assess a
+		<include refid="reQuestionnaireAssessJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="ReQuestionnaireAssess">
+		SELECT 
+			<include refid="reQuestionnaireAssessColumns"/>
+		FROM re_questionnaire_assess a
+		<include refid="reQuestionnaireAssessJoins"/>
+		
+		left join db_level l4 on  l4.id = ai.level_id
+		left join db_level l3 on  l4.parent_id = l3.id
+		left join db_level l2 on  l3.parent_id = l2.id
+		left join db_level l1 on  l2.parent_id = l1.id
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="questionnaireId != null and questionnaireId != ''">
+			AND a.questionnaire_id = #{questionnaireId.id}
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY l1.sort, l2.sort,l3.sort,l4.sort 
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="ReQuestionnaireAssess">
+		SELECT 
+			<include refid="reQuestionnaireAssessColumns"/>
+		FROM re_questionnaire_assess a
+		<include refid="reQuestionnaireAssessJoins"/>
+		left join db_level l4 on  l4.id = ai.level_id
+		left join db_level l3 on  l4.parent_id = l3.id
+		left join db_level l2 on  l3.parent_id = l2.id
+		left join db_level l1 on  l2.parent_id = l1.id
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY l1.sort, l2.sort,l3.sort,l4.sort 
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO re_questionnaire_assess(
+			id,
+			questionnaire_id,
+			assess_id,
+			proportion,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag,
+			def1,
+			def2,
+			def3,
+			def4,
+			def5
+		) VALUES (
+			#{id},
+			#{questionnaireId.id},
+			#{assessId.id},
+			#{proportion},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag},
+			#{def1},
+			#{def2},
+			#{def3},
+			#{def4},
+			#{def5}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE re_questionnaire_assess SET 	
+			questionnaire_id = #{questionnaireId.id},
+			assess_id = #{assessId.id},
+			proportion = #{proportion},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks},
+			def1 = #{def1},
+			def2 = #{def2},
+			def3 = #{def3},
+			def4 = #{def4},
+			def5 = #{def5}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE re_questionnaire_assess SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

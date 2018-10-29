@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starsoft.ezicloud.modules.assess.dao.ReTeacherplanDao">
+    
+	<sql id="reTeacherplanColumns">
+		a.id AS "id",
+		a.teacher_id AS "teacherId",
+		a.class_course_child_id AS "classCourseChildId",
+		a.file_url AS "fileUrl",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.del_flag AS "delFlag",
+		a.remarks AS "remarks"
+	</sql>
+	
+	<sql id="reTeacherplanJoins">
+	</sql>
+    
+	<select id="get" resultType="ReTeacherplan">
+		SELECT 
+			<include refid="reTeacherplanColumns"/>
+		FROM re_teacherplan a
+		<include refid="reTeacherplanJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="ReTeacherplan">
+		SELECT 
+			<include refid="reTeacherplanColumns"/>
+		FROM re_teacherplan a
+		<include refid="reTeacherplanJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="teacherId != null and teacherId != ''">
+				AND a.teacher_id = #{teacherId}
+			</if>
+			<if test="classCourseChildId != null and classCourseChildId != ''">
+				AND a.class_course_child_id = #{classCourseChildId}
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="ReTeacherplan">
+		SELECT 
+			<include refid="reTeacherplanColumns"/>
+		FROM re_teacherplan a
+		<include refid="reTeacherplanJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO re_teacherplan(
+			id,
+			teacher_id,
+			class_course_child_id,
+			file_url,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			del_flag,
+			remarks
+		) VALUES (
+			#{id},
+			#{teacherId},
+			#{classCourseChildId},
+			#{fileUrl},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{delFlag},
+			#{remarks}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE re_teacherplan SET 	
+			teacher_id = #{teacherId},
+			class_course_child_id = #{classCourseChildId},
+			file_url = #{fileUrl},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE re_teacherplan SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

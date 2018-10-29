@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starsoft.ezicloud.modules.assess.dao.DbQuestionnaireSurveyDao">
+    
+	<sql id="dbQuestionnaireSurveyColumns">
+		a.id AS "id",
+		a.bookunit AS "bookunit",
+		a.subject AS "subject",
+		a.school AS "school.id",
+		a.name AS "name",
+		a.gender AS "gender",
+		a.age AS "age",
+		a.education AS "education",
+		a.years AS "years",
+		a.times AS "times",
+		a.reference AS "reference",
+		a.processing_mode AS "processingMode",
+		a.ready_order AS "readyOrder",
+		a.solve_ordedr AS "solveOrdedr",
+		a.questions_order AS "questionsOrder",
+		a.team_order AS "teamOrder",
+		a.homework_order AS "homeworkOrder",
+		a.correcting AS "correcting",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag",
+		a.def1 AS "def1",
+		a.def2 AS "def2",
+		a.def3 AS "def3",
+		a.def4 AS "def4",
+		a.def5 AS "def5",
+		o4.name As "school.name"
+	</sql>
+	
+	<sql id="dbQuestionnaireSurveyJoins">
+		LEFT JOIN sys_office o4 ON o4.id = a.school
+	</sql>
+    
+	<select id="get" resultType="DbQuestionnaireSurvey">
+		SELECT 
+			<include refid="dbQuestionnaireSurveyColumns"/>
+		FROM db_questionnaire_survey a
+		<include refid="dbQuestionnaireSurveyJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="DbQuestionnaireSurvey">
+		SELECT 
+			<include refid="dbQuestionnaireSurveyColumns"/>
+		FROM db_questionnaire_survey a
+		<include refid="dbQuestionnaireSurveyJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="bookunit != null and bookunit != ''">
+				AND a.bookunit = #{bookunit}
+			</if>
+			<if test="subject != null and subject != ''">
+				AND a.subject = #{subject}
+			</if>
+			<if test="school != null and school.id != null and school.id  != ''">
+				AND a.school =#{school.id}
+			</if>
+			<!-- <if test="school != null and school != ''">
+				AND a.school LIKE 
+					<if test="dbName == 'oracle'">'%'||#{school}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{school}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{school},'%')</if>
+			</if> -->
+			<if test="name != null and name != ''">
+				AND a.name LIKE 
+					<if test="dbName == 'oracle'">'%'||#{name}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{name}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{name},'%')</if>
+			</if>
+			<if test="createBy != null and createBy != ''  ">
+				AND  a.create_by = #{createBy.id}
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="DbQuestionnaireSurvey">
+		SELECT 
+			<include refid="dbQuestionnaireSurveyColumns"/>
+		FROM db_questionnaire_survey a
+		<include refid="dbQuestionnaireSurveyJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO db_questionnaire_survey(
+			id,
+			bookunit,
+			subject,
+			school,
+			name,
+			gender,
+			age,
+			education,
+			years,
+			times,
+			reference,
+			processing_mode,
+			ready_order,
+			solve_ordedr,
+			questions_order,
+			team_order,
+			homework_order,
+			correcting,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			del_flag,
+			def1
+		) VALUES (
+			#{id},
+			#{bookunit},
+			#{subject},
+			#{school.id},
+			#{name},
+			#{gender},
+			#{age},
+			#{education},
+			#{years},
+			#{times},
+			#{reference},
+			#{processingMode},
+			#{readyOrder},
+			#{solveOrdedr},
+			#{questionsOrder},
+			#{teamOrder},
+			#{homeworkOrder},
+			#{correcting},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{delFlag},
+			#{def1}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE db_questionnaire_survey SET 	
+			bookunit = #{bookunit},
+			subject = #{subject},
+			school = #{school.id},
+			name = #{name},
+			gender = #{gender},
+			age = #{age},
+			education = #{education},
+			years = #{years},
+			times = #{times},
+			reference = #{reference},
+			processing_mode = #{processingMode},
+			ready_order = #{readyOrder},
+			solve_ordedr = #{solveOrdedr},
+			questions_order = #{questionsOrder},
+			team_order = #{teamOrder},
+			homework_order = #{homeworkOrder},
+			correcting = #{correcting},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			def1=#{def1}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE db_questionnaire_survey SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

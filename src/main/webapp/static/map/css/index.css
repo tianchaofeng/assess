@@ -1,0 +1,246 @@
+body {
+	background: url("../images/qiantai/bg.png") repeat-x rgb(232, 241, 253);
+}
+a.d {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+#content {
+	background: rgb(255, 255, 255); margin: 0px auto; width: 1024px; height: auto; overflow: hidden; border-top-color: currentColor; border-top-width: 360px; border-top-style: none;
+}
+#warn {
+	background: rgb(253, 253, 253); margin: 10px auto 0px; width: 1000px; position: relative;
+}
+#content #search {
+	background: rgb(253, 253, 253); margin: 10px auto 0px; border: 1px solid rgb(194, 183, 183); border-image: none; width: 1002px; height: 62px; position: relative;
+}
+#content #search #search_box {
+	border: 1px solid rgb(241, 231, 231); border-image: none; left: 13px; top: 13px; width: 833px; height: 40px; position: absolute;
+}
+#content #search #search_box form #keywords {
+	margin: 4px 10px 0px 113px; border: currentColor; border-image: none; width: 723px; height: 35px; color: rgb(153, 153, 153); font-family: "宋体"; font-size: 15px; float: left; background-repeat: no-repeat;
+}
+#content #search #search_box form select {
+	background: url("/qiantai/images/qiantai/select_Style.png") no-repeat right top; border: 1px solid rgb(241, 231, 231); border-image: none; width: 110px; height: 40px; color: rgb(58, 135, 238); font-family: "宋体"; font-size: 15px; position: absolute;
+}
+#content #search #search_box form #submit {
+	background: url("../images/ico_bg.png"); border: currentColor; border-image: none; top: 5px; width: 23px; height: 23px; display: block; position: relative;
+}
+#content #search #search_box #address {
+	margin: 5px 0px 0px 10px; top: 0px; width: 100px; height: 25px; right: 0px; border-left-color: rgb(99, 94, 94); border-left-width: 1px; border-left-style: solid; position: absolute;
+}
+#content #search #search_box #address #chose_address {
+	background: url("../images/ico_bg.png") no-repeat 70px -61px; height: 25px; color: rgb(99, 94, 94); line-height: 25px; padding-left: 15px; font-size: 12px; cursor: pointer;
+}
+html body div#content div#search input#sub {
+	border-radius: 3px; border: currentColor; border-image: none; left: 867px; top: 13px; width: 120px; height: 40px; text-align: center; color: rgb(255, 255, 255); font-family: "宋体"; font-size: 16px; float: left; display: block; position: absolute; background-color: rgb(58, 135, 238);
+}
+#content #search #advance_search {
+	width: 375px; height: 60px; float: right;
+}
+#newsInfo_ul li {
+	height: 40px; padding-top: 8px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+#newsInfo_ul li img {
+	padding-left: 10px;
+}
+#newsInfo_ul li a {
+	color: rgb(62, 63, 64); font-family: "宋体"; font-size: 16px;
+}
+#newsInfo_ul li font {
+	padding-left: 35px; font-family: "宋体";
+}
+#content #search #advance_search p {
+	height: 30px; line-height: 30px; padding-left: 30px;
+}
+#content #search #advance_search p a {
+	color: rgb(91, 86, 86);
+}
+#content .list_box {
+	background: rgb(255, 255, 255); margin: 0px 10px 10px 0px; border: 1px solid rgb(240, 240, 240); border-image: none; width: 342px; height: 320px; padding-bottom: 10px; float: left; position: relative;
+}
+#content #main_content {
+	margin: 0px auto; padding: 10px; width: 1008px; height: auto; overflow: hidden;
+}
+#content #main_content .list_box .list_box_top {
+	width: 100%; height: 38px; padding-top: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dashed; position: relative;
+}
+#content #main_content .list_box .list_box_top h2 {
+	height: 28px; color: rgb(62, 63, 64); line-height: 28px; padding-left: 10px; font-family: "宋体"; font-size: 16px; margin-left: 10px; border-left-color: rgb(58, 135, 238); border-left-width: 5px; border-left-style: solid;
+}
+#content #main_content #frendlink #link_top h2 {
+	height: 28px; color: rgb(62, 63, 64); line-height: 28px; padding-left: 10px; font-family: "宋体"; font-size: 16px; margin-left: 10px; border-left-color: rgb(58, 135, 238); border-left-width: 5px; border-left-style: solid;
+}
+#content #main_content .list_box .list_box_top .more a {
+	top: 15px; right: 20px; color: rgb(58, 135, 238); font-family: "宋体"; font-size: 14px; position: absolute;
+}
+#content #main_content .list_box_inner {
+	height: auto; overflow: hidden; border-top-color: currentColor; border-top-width: medium; border-top-style: none;
+}
+#content #main_content .list_box_inner .list_box_inner_ul {
+	margin: 0px auto; height: auto; overflow: hidden; padding-top: 5px; float: left;
+}
+#content #main_content .list_box .list_box_inner .list_box_inner_ul li {
+	list-style: inside; width: 320px; height: 27px; color: rgb(62, 63, 64); line-height: 27px; overflow: hidden; padding-left: 15px;
+}
+#content #main_content .list_box .list_box_inner .list_box_inner_ul li a {
+	color: rgb(62, 63, 64);
+}
+#content #main_content .list_box .list_box_inner .list_box_inner_ul li font {
+	padding-right: 5px; float: right;
+}
+#content #main_content .list_box .list_box_inner #list_box_topone {
+	height: 80px; padding-top: 10px; position: relative;
+}
+#content #main_content .list_box .list_box_inner #list_box_topone #policy_title {
+	width: 140px; height: 30px; color: rgb(149, 111, 0); line-height: 30px; padding-left: 10px; font-size: 14px; border-bottom-color: rgb(124, 102, 36); border-bottom-width: 1px; border-bottom-style: dotted; float: right;
+}
+#content #main_content .list_box .list_box_inner #list_box_topone p {
+	width: 162px; height: 40px; line-height: 1.5em; float: right;
+}
+#content #main_content .list_box .list_box_inner #list_box_topone #see_detail {
+	background: rgb(51, 51, 51); margin: 10px 30px 0px 0px; border-radius: 20px; width: 115px; height: 30px; text-align: center; color: rgb(255, 255, 255); line-height: 30px; float: right; display: block;
+}
+#content #main_content .list_box .list_box_inner .list_box2_inner_ul {
+	margin: 0px auto; width: auto; height: auto; overflow: hidden; padding-right: 10px; padding-left: 10px;
+}
+#content #main_content .list_box .list_box_inner .list_box2_inner_ul li {
+	list-style: none; width: 320px; height: 34px; color: rgb(62, 63, 64); line-height: 34px; overflow: hidden; padding-top: 2px; margin-right: 5px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dashed; float: left;
+}
+#content #main_content .list_box .list_box_inner .list_box2_inner_ul li font {
+	margin: 0px; padding-right: 5px; padding-left: 5px;
+}
+#content #main_content .list_box .list_box_inner .list_box2_inner_ul li a {
+	color: rgb(62, 63, 64); font-size: 15px; vertical-align: bottom;
+}
+#content #main_content #login_area {
+	border: 1px solid rgb(240, 240, 240); border-image: none; width: 241px; height: 306px; float: left; position: relative;
+}
+#content #main_content #login_area #login_title {
+	background: url("../images/ico_bg.png") no-repeat left -215px; margin: 10px 0px 0px 20px; height: 40px; color: rgb(49, 50, 57); line-height: 40px; padding-left: 50px; font-family: "宋体"; font-size: 20px; font-weight: 700;
+}
+#content #main_content #login_area form ul li {
+	height: 40px; color: rgb(204, 204, 204); line-height: 40px; padding-top: 10px; font-family: "宋体"; font-size: 15px;
+}
+#content #main_content #login_area form ul {
+	margin: 5px 0px 0px 10px; height: auto; overflow: visible;
+}
+#content #main_content #login_area form ul li .login_option {
+	width: 60px; color: rgb(121, 121, 125); font-family: "宋体"; font-size: 14px; font-weight: 700; float: left; display: block;
+}
+#content #main_content #login_area form table tr td {
+	height: 30px; line-height: 30px; vertical-align: top;
+}
+#content #main_content #login_area form table {
+	margin: 20px 20px 0px 38px; border: 0px currentColor; border-image: none; height: auto; overflow: hidden;
+}
+#content #main_content #login_area form table tr td .login_option {
+	width: 80px; color: rgb(121, 121, 125); font-family: "宋体"; font-size: 14px; font-weight: 700; float: left; display: block;
+}
+#content #main_content #login_area form ul li input {
+	background: rgb(235, 232, 234); border: 1px solid rgb(122, 116, 116); border-image: none; width: 140px; height: 20px;
+}
+#content #main_content #login_area form ul li input.radio {
+	width: 15px; height: 15px; display: inline-block;
+}
+#content #main_content #login_area form #lg_sub {
+	border-radius: 3px; border: currentColor; border-image: none; left: 20px; width: 162px; height: 40px; bottom: 20px; color: white; font-family: "宋体"; font-size: 16px; margin-left: 20px; display: block; position: absolute; background-color: rgb(58, 135, 238);
+}
+#content #main_content #login_area #usereg {
+	left: 100px; bottom: 46px; color: rgb(255, 255, 255); font-family: "宋体"; font-size: 15px; position: absolute;
+}
+#content #main_content #login_area #uerreg_2 {
+	background: url("../../zhaopin_2/btn_ss.png") no-repeat; width: 85px; height: 29px; color: rgb(255, 255, 255); font-family: "宋体"; font-size: 14px; margin-top: 48px; margin-left: 100px; float: left;
+}
+#content #main_content #login_area #uerreg_3 {
+	background: url("../../zhaopin_2/btn_ss.png") no-repeat; width: 85px; height: 29px; color: rgb(255, 255, 255); font-family: "宋体"; font-size: 14px; margin-top: 15px; float: right; magin-right: 50px;
+}
+#content #main_content .list_box .list_box_inner #corse_title {
+	left: 30px; top: 105px; color: rgb(49, 50, 57); position: absolute;
+}
+#content #main_content .list_box .list_box_inner .list_box_inner_ul li a .list_red {
+	padding: 6px; color: red;
+}
+#content #main_content .list_box .list_box_inner .list_box_inner_ul li .new_ico {
+	background: url("../images/ico_bg.png") 0px -300px; width: 19px; height: 7px; margin-left: 10px; display: inline-block;
+}
+#content #main_content .list_box .list_box_inner .address {
+	margin: 0px auto; padding: 5px 0px; width: 80%; text-align: left; color: rgb(51, 51, 51); line-height: 1.5em; font-family: "宋体"; font-size: 14px;
+}
+#content #main_content #frendlink {
+	background: rgb(255, 255, 255); border: 1px solid rgb(224, 224, 224); border-image: none; width: 1002px; clear: both; min-height: 150px;
+}
+#content #main_content #frendlink .list_box_top {
+	width: 100%; height: 38px; padding-top: 10px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dashed; position: relative;
+}
+#content #main_content #frendlink .list_box_top h2 {
+	height: 28px; color: rgb(62, 63, 64); line-height: 28px; padding-left: 10px; font-family: "宋体"; font-size: 16px; margin-left: 10px; border-left-color: rgb(58, 135, 238); border-left-width: 5px; border-left-style: solid;
+}
+#content #main_content #frendlink #link_top {
+	width: 100%; height: 38px; padding-top: 10px; border-bottom-color: rgb(153, 153, 153); border-bottom-width: 1px; border-bottom-style: dashed; position: relative;
+}
+#content #main_content #frendlink #link_list ul {
+	margin: 0px auto; padding: 1px 5px; width: 100%; height: auto; overflow: hidden;
+}
+#content #main_content #frendlink #link_list ul li {
+	padding: 5px; float: left;
+}
+#content #main_content #frendlink #link_list ul li a {
+	color: rgb(49, 50, 57);
+}
+#topbox .logo_1 {
+	
+}
+#content #main_content #login_area form #enroll {
+	font-family: "宋体"; font-size: 14px; margin-top: 10px; margin-left: 0px; float: left;
+}
+#content #main_content #login_area form #enroll a {
+	padding: 0px 10px; color: orange;
+}
+#daohang div {
+	width: 79px; height: 64px; text-align: center; float: left;
+}
+#daohang div a {
+	color: rgb(96, 97, 150); font-family: "宋体"; font-size: 14px;
+}
+#citydiv {
+	margin: 0px auto; width: 480px; height: auto; overflow: hidden; padding-bottom: 20px;
+}
+#cityul {
+	margin: 20px 0px 0px 20px; width: 480px; float: left;
+}
+#cityul li {
+	width: 80px; height: 25px; float: left; cursor: pointer;
+}
+#content #main_content #login_area #regbtn {
+	left: 120px; bottom: 50px; color: rgb(255, 255, 255); font-weight: 800; position: absolute;
+}
+#content #main_content .list_box .list_box_inner #list_box_topone #list_box_ul {
+	width: 150px; height: 70px; float: left;
+}
+#content #main_content .list_box .list_box_inner #list_box_topone #list_box_ul li {
+	list-style: inside; height: 25px; color: rgb(154, 159, 154); padding-left: 10px;
+}
+#content #main_content .list_box .list_box_inner #list_box_topone #list_box_ul li a {
+	color: rgb(49, 50, 57);
+}
+#content #main_content #login_area #regbtn {
+	background: url("../images/btn_ss.png"); left: 35px; width: 98px; height: 28px; text-align: center; bottom: 30px; color: rgb(255, 255, 255); line-height: 28px; font-weight: 800; display: block; position: absolute;
+}
+#content #main_content #login_area #regbtn2 {
+	background: url("../images/btn_ss.png"); left: 35px; width: 98px; height: 28px; text-align: center; bottom: 30px; color: rgb(255, 255, 255); line-height: 28px; font-weight: 800; display: block; position: absolute;
+}
+#content #main_content #login_area #regbtn2 {
+	left: 150px;
+}
+#content #main_content .list_box .list_box_top h2 .policy_list {
+	padding: 0px 10px; margin-right: 10px; float: left; display: block; cursor: pointer;
+}
+#content #main_content .list_box .list_box_inner.list_box_tab {
+	width: 100%; position: absolute;
+}
+#content #main_content .list_box .list_box_top h2 .policy_list.policy_hover {
+	background: rgb(255, 255, 255); height: 37px; line-height: 35px; border-top-color: rgb(255, 132, 0); border-right-color: rgb(219, 222, 225); border-left-color: rgb(219, 222, 225); border-top-width: 2px; border-right-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-left-style: solid;
+}
+#content #main_content #mid_banner {
+	clear: both; margin-bottom: 10px;
+}

@@ -1,0 +1,1377 @@
+::selection {
+	color: rgb(51, 51, 51); background-color: rgba(13, 173, 81, 0.2);
+}
+body {
+	margin: 0px; padding: 0px;
+}
+div {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+article {
+	display: block;
+}
+aside {
+	display: block;
+}
+details {
+	display: block;
+}
+canvas {
+	display: block;
+}
+figcaption {
+	display: block;
+}
+figure {
+	display: block;
+}
+footer {
+	display: block;
+}
+header {
+	display: block;
+}
+hgroup {
+	display: block;
+}
+main {
+	display: block;
+}
+nav {
+	display: block;
+}
+section {
+	display: block;
+}
+summary {
+	display: block;
+}
+html {
+	-ms-overflow-y: scroll; -ms-text-size-adjust: 100%; -webkit-overflow-scrolling: touch; -webkit-text-size-adjust: 100%;
+}
+img {
+	border: 0px currentColor; border-image: none; vertical-align: top;
+}
+dl {
+	list-style: none; margin: 0px; padding: 0px;
+}
+dt {
+	list-style: none; margin: 0px; padding: 0px;
+}
+dd {
+	list-style: none; margin: 0px; padding: 0px;
+}
+ul {
+	list-style: none; margin: 0px; padding: 0px;
+}
+ol {
+	list-style: none; margin: 0px; padding: 0px;
+}
+li {
+	list-style: none; margin: 0px; padding: 0px;
+}
+h1 {
+	margin: 0px; padding: 0px; font-size: 100%; font-weight: normal;
+}
+h2 {
+	margin: 0px; padding: 0px; font-size: 100%; font-weight: normal;
+}
+h3 {
+	margin: 0px; padding: 0px; font-size: 100%; font-weight: normal;
+}
+h4 {
+	margin: 0px; padding: 0px; font-size: 100%; font-weight: normal;
+}
+h5 {
+	margin: 0px; padding: 0px; font-size: 100%; font-weight: normal;
+}
+h6 {
+	margin: 0px; padding: 0px; font-size: 100%; font-weight: normal;
+}
+input {
+	margin: 0px; padding: 0px; font-family: "Hiragino Sans GB","Microsoft Yahei UI","Microsoft Yahei","Î¢ÈíÑÅºÚ","Segoe UI",Tahoma,"ËÎÌåb8bÌå",SimSun,sans-serif; resize: none;
+}
+textarea {
+	margin: 0px; padding: 0px; font-family: "Hiragino Sans GB","Microsoft Yahei UI","Microsoft Yahei","Î¢ÈíÑÅºÚ","Segoe UI",Tahoma,"ËÎÌåb8bÌå",SimSun,sans-serif; resize: none;
+}
+button {
+	margin: 0px; padding: 0px; font-family: "Hiragino Sans GB","Microsoft Yahei UI","Microsoft Yahei","Î¢ÈíÑÅºÚ","Segoe UI",Tahoma,"ËÎÌåb8bÌå",SimSun,sans-serif; resize: none;
+}
+input[type='search'] {
+	box-sizing: content-box;
+}
+button {
+	border: 0px currentColor; border-image: none;
+}
+em {
+	font-style: normal; font-weight: 400;
+}
+i {
+	font-style: normal; font-weight: 400;
+}
+b {
+	font-style: normal; font-weight: 400;
+}
+strong {
+	font-style: normal; font-weight: 400;
+}
+iframe {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none;
+}
+body {
+	color: rgb(51, 51, 51); font-family: "Hiragino Sans GB","Microsoft Yahei UI","Microsoft Yahei","Î¢ÈíÑÅºÚ","Segoe UI",Tahoma,"ËÎÌåb8bÌå",SimSun,sans-serif; font-size: 14px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; text-rendering: optimizeLegibility;
+}
+.lianjia-header {
+	background: rgb(57, 172, 106); height: 55px; color: rgb(255, 255, 255); line-height: 55px;
+}
+.lianjia-header .welcome {
+	font-size: 12px;
+}
+.lianjia-header .logo {
+	width: 148px; height: 30px; margin-top: 15px; display: block; background-image: url("img/new-version/logo.png"); background-repeat: no-repeat;
+}
+.lianjia-header .nav {
+	width: 840px;
+}
+.lianjia-header .nav .login .typeShowUser a {
+	font-size: 14px;
+}
+.lianjia-header .nav .login .typeShowUser > a {
+	margin: 0px;
+}
+.lianjia-header .nav ul {
+	width: 606px; text-align: right; padding-top: 0px; clear: both; margin-left: 20px; float: right;
+}
+.lianjia-header .nav ul li {
+	float: left; position: relative;
+}
+.lianjia-header .nav ul li.hover:hover {
+	z-index: 1005;
+}
+.lianjia-header .nav ul li.hover:hover .nav-list {
+	position: absolute; z-index: 99999; opacity: 1; pointer-events: auto; transform: translateY(0px) scale(1); -webkit-transform: translateY(0) scale(1); -moz-transform: translateY(0) scale(1); -o-transform: translateY(0) scale(1);
+}
+.lianjia-header .nav ul li.hover .nav-list {
+	transform-origin: 50% 0%; transition:500ms cubic-bezier(0.34, 1.21, 0.4, 1); left: 50%; top: 42px; width: 100px; height: 20px; margin-left: -38px; position: absolute; z-index: 99999; opacity: 0; transform: translateY(0px) scale(0); -webkit-transform: translateY(0) scale(0); -moz-transform: translateY(0) scale(0); -o-transform: translateY(0) scale(0); -webkit-transition: all 500ms cubic-bezier(.34, 1.21, .4, 1); -moz-transition: all 500ms cubic-bezier(.34, 1.21, .4, 1); -webkit-transform-origin: 50% 0; -moz-transform-origin: 50% 0; -o-transform-origin: 50% 0;
+}
+.lianjia-header .nav ul li.hover .nav-list-xinfang {
+	top: 26px;
+}
+.lianjia-header .nav ul li.hover dd {
+	background: rgb(249, 249, 249); padding: 10px 0px; border-radius: 2px; left: -25px; width: 124px; margin-top: 13px; position: absolute; box-shadow: 0px 1px 3px rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.lianjia-header .nav ul li.hover dd img {
+	width: 100px; height: 100px; margin-left: 13px; float: left;
+}
+.lianjia-header .nav ul li.hover dd i {
+	left: 53px; top: -10px; width: 0px; height: 0px; border-right-color: transparent; border-bottom-color: rgb(255, 255, 255); border-left-color: transparent; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; display: block; position: absolute;
+}
+.lianjia-header .nav ul li.hover dd dl {
+	height: 30px; line-height: 30px;
+}
+.lianjia-header .nav ul li.hover dd dl a {
+	padding: 0px; color: rgb(51, 51, 51); font-size: 14px; margin-left: 20px; float: left;
+}
+.lianjia-header .nav ul li a {
+	padding: 0px 10px; color: rgb(255, 255, 255); font-size: 16px; text-decoration: none; display: inline-block;
+}
+.lianjia-header .nav ul li a.on {
+	background: rgb(48, 150, 92);
+}
+.lianjia-header .nav .login a {
+	margin: 0px 5px; color: rgb(255, 255, 255); font-size: 16px;
+}
+.lianjia-header .nav .ti-hover {
+	position: relative; z-index: 99;
+}
+.lianjia-header .nav .ti-hover:hover .user-news ul {
+	opacity: 1; pointer-events: auto; transform: translateY(0px) scale(1); -webkit-transform: translateY(0) scale(1); -moz-transform: translateY(0) scale(1); -o-transform: translateY(0) scale(1);
+}
+.lianjia-header .nav .typeUserInfo {
+	position: relative; z-index: 2;
+}
+.lianjia-header .nav .typeShowUser {
+	position: relative; z-index: 2;
+}
+.lianjia-header .nav .typeUserInfo .login_bubble_tip {
+	background: rgb(226, 101, 92); padding: 1px 3px; width: auto; font-size: 0.87em; margin-left: 5px; float: none; display: inline;
+}
+.lianjia-header .nav .typeShowUser .login_bubble_tip {
+	background: rgb(226, 101, 92); padding: 1px 3px; width: auto; font-size: 0.87em; margin-left: 5px; float: none; display: inline;
+}
+.lianjia-header .nav .typeUserInfo a span {
+	float: left; max-width: 132px;
+}
+.lianjia-header .nav .typeShowUser a span {
+	float: left; max-width: 132px;
+}
+.lianjia-header .nav .typeUserInfo a span.reg {
+	top: 1px; float: none; display: inline; position: relative;
+}
+.lianjia-header .nav .typeShowUser a span.reg {
+	top: 1px; float: none; display: inline; position: relative;
+}
+.lianjia-header .nav .typeUserInfo a span.log {
+	top: 1px; float: none; display: inline; position: relative;
+}
+.lianjia-header .nav .typeShowUser a span.log {
+	top: 1px; float: none; display: inline; position: relative;
+}
+.lianjia-header .nav .user-news {
+	left: 0px; top: 0px; right: 0px; bottom: 0px; color: rgb(255, 255, 255); position: absolute; z-index: 1; cursor: pointer;
+}
+.lianjia-header .nav .user-news i {
+	background: rgb(226, 101, 92); padding: 1px; height: 11px; text-align: center; line-height: 11px; font-size: 0.87em; display: inline-block;
+}
+.lianjia-header .nav .user-news > i {
+	padding: 0px 5px; top: 18px; height: 16px; text-align: center; right: 37px; color: rgb(255, 255, 255); line-height: 16px; position: absolute; background-color: rgb(226, 101, 92);
+}
+.lianjia-header .nav .user-news span {
+	left: 53px; top: -10px; width: 0px; height: 0px; border-right-color: transparent; border-bottom-color: rgb(255, 255, 255); border-left-color: transparent; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; display: block; position: absolute;
+}
+.lianjia-header .nav .user-news ul {
+	background: rgb(249, 249, 249); padding: 10px 0px; transform-origin: 50% 0%; border-radius: 2px; border: 1px solid rgb(228, 228, 228); transition:500ms cubic-bezier(0.34, 1.21, 0.4, 1); border-image: none; left: 50%; top: 50px; width: 198px; margin-left: -120px; position: absolute; opacity: 0; transform: translateY(0px) scale(0); -webkit-transform: translateY(0) scale(0); -moz-transform: translateY(0) scale(0); -o-transform: translateY(0) scale(0); -webkit-transition: all 500ms cubic-bezier(.34, 1.21, .4, 1); -moz-transition: all 500ms cubic-bezier(.34, 1.21, .4, 1); -webkit-transform-origin: 50% 0; -moz-transform-origin: 50% 0; -o-transform-origin: 50% 0;
+}
+.lianjia-header .nav .user-news ul li {
+	width: 201px; height: 25px; text-align: center; color: rgb(153, 153, 153); line-height: 25px; clear: both; font-size: 12px;
+}
+.lianjia-header .nav .user-news ul li a {
+	color: rgb(153, 153, 153); font-size: 12px; font-weight: normal; margin-left: 0px; text-shadow: none;
+}
+.lianjia-header .nav .user-news ul li a i {
+	background: none; margin: 0px 3px; color: rgb(244, 106, 31); font-weight: 700;
+}
+.lianjia-header .nav .user-news ul li.s-li {
+	left: 25px; top: -10px; height: 0px; position: relative;
+}
+@media not all, not all, not all, not all
+{
+.lianjia-header .logo {
+	background: url("img/new-version/logo@2x.png") 0% 0% / 148px 30px;
+}
+}
+.dl-lst dt {
+	height: 27px; line-height: 27px; font-size: 12px; font-weight: 700; margin-right: 6px; float: left;
+}
+.dl-lst dt h3 {
+	font-weight: 700;
+}
+.dl-lst dd {
+	width: 946px; -ms-zoom: 1;
+}
+.dl-lst dd a {
+	padding: 10px 7px 15px; height: 27px; color: rgb(51, 51, 51); line-height: 27px; font-size: 12px;
+}
+.dl-lst dd a:hover {
+	color: rgb(57, 172, 106); text-decoration: underline;
+}
+.dl-lst dd a.on {
+	color: rgb(228, 57, 60);
+}
+.dl-lst dd span {
+	color: rgb(57, 172, 106); font-weight: 700; margin-right: 2px; margin-left: 17px;
+}
+.footer {
+	background: url("img/home/footer-bg.jpg") no-repeat top rgb(34, 34, 34); width: 100%; height: 426px; clear: both; margin-top: 45px;
+}
+.footer .wrapper {
+	width: 1150px;
+}
+.footer .f-title {
+	margin: 0px; height: 75px; line-height: 75px; border-bottom-color: rgb(57, 57, 57); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.footer .f-title .fr {
+	color: rgb(125, 207, 160);
+}
+.footer .f-title .fl li {
+	float: left;
+}
+.footer .f-title .fl li.nav_f {
+	text-align: left; position: relative;
+}
+.footer .f-title .fl li.nav_f:hover .sitemap-quick {
+	display: block;
+}
+.footer .f-title .fl li.nav_f .sitemap-quick {
+	background: rgba(71, 78, 88, 0.95); padding: 15px; border-radius: 3px; top: 49px; width: 200px; right: -70px; line-height: 20px; display: none; position: absolute; z-index: 999; box-shadow: 0px 2px 5px rgba(0,0,0,0.25); -webkit-border-radius: 3px; -moz-border-radius: 3px;
+}
+.footer .f-title .fl li.nav_f .sitemap-quick p {
+	color: rgb(255, 243, 190); font-size: 14px; font-weight: 700;
+}
+.footer .f-title .fl li.nav_f .sitemap-quick dd a {
+	margin: 5px 0px; height: auto; color: rgb(219, 236, 225);
+}
+.footer .f-title .fl li.nav_f .sitemap-quick .nav_area {
+	width: 200px; padding-bottom: 10px; clear: both; margin-bottom: 10px; border-bottom-color: rgb(119, 119, 119); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.footer .f-title .fl li.nav_f .sitemap-quick .last {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+.footer .f-title .fl li.nav_f .sitemap-quick a {
+	padding: 0px; height: 20px; color: rgb(221, 221, 221); line-height: 20px; font-size: 12px; margin-right: 9px; float: none; display: inline-block;
+}
+.footer .f-title .fl li a {
+	color: rgb(255, 255, 255); font-size: 14px; margin-right: 15px;
+}
+.footer .f-title .fl li a:hover {
+	text-decoration: none;
+}
+.footer .lianjia-link-box {
+	background: none; padding: 13px 0px 20px; border-bottom-color: rgb(57, 57, 57); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.footer .lianjia-link-box .fl {
+	width: 870px;
+}
+.footer .lianjia-link-box .fl .tab {
+	height: 40px;
+}
+.footer .lianjia-link-box .fl .tab span {
+	background: rgb(18, 18, 18); padding: 8px 10px; transition:0.3s ease-in-out; color: rgb(136, 140, 142); font-size: 12px; margin-right: 12px; float: left; cursor: pointer; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out;
+}
+.footer .lianjia-link-box .fl .tab span.hover {
+	background: rgb(57, 64, 67); color: rgb(255, 255, 255);
+}
+.footer .lianjia-link-box .fl .link-list div {
+	height: 89px; overflow: hidden; display: none;
+}
+.footer .lianjia-link-box .fl dd a {
+	margin: 10px 10px 0px 0px; color: rgb(136, 140, 142); font-size: 12px; display: inline-block;
+}
+.footer .lianjia-link-box .fr img {
+	border-radius: 2px; border: 5px solid rgb(255, 255, 255); border-image: none; width: 129px; height: 129px;
+}
+.footer .bottom {
+	padding-top: 23px;
+}
+.footer .bottom .copyright {
+	color: rgb(136, 140, 142); line-height: 20px; font-size: 12px;
+}
+.footer .bottom .hot-frauds {
+	height: 45px; position: relative;
+}
+.footer .bottom .hot-frauds label {
+	border: 1px solid rgb(153, 153, 153); border-image: none; width: 77px; height: 27px; text-align: center; color: rgb(153, 153, 153); line-height: 27px; font-size: 12px; float: right; display: block;
+}
+.footer .bottom .hot-frauds label.hover {
+	background: rgb(255, 255, 255);
+}
+.footer .bottom .hot-frauds label i {
+	background: url("img/home/sprite.png") -582px -19px; width: 9px; height: 6px; margin-left: 5px; display: inline-block;
+}
+.footer .bottom .hot-frauds .frauds-list {
+	background: rgb(255, 255, 255); padding: 20px; border-radius: 2px; top: 45px; width: 505px; right: 0px; display: none; position: absolute;
+}
+.footer .bottom .hot-frauds .frauds-list i {
+	top: -9px; width: 0px; height: 0px; right: 28px; border-right-color: transparent; border-bottom-color: rgb(255, 255, 255); border-left-color: transparent; border-right-width: 10px; border-bottom-width: 10px; border-left-width: 10px; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; display: block; position: absolute;
+}
+.footer .bottom .hot-frauds .frauds-list span {
+	background: rgb(245, 245, 245); width: 19px; height: 19px; text-align: center; color: rgb(51, 51, 51); font-size: 12px; margin-right: 4px; display: inline-block; cursor: pointer;
+}
+.footer .bottom .hot-frauds .frauds-list span.hover {
+	background: rgb(34, 34, 34); color: rgb(255, 255, 255);
+}
+.footer .bottom .hot-frauds .frauds-list .link-list {
+	line-height: 23px;
+}
+.footer .bottom .hot-frauds .frauds-list .link-list div {
+	display: none;
+}
+.footer .bottom .hot-frauds .frauds-list .link-list a {
+	color: rgb(153, 153, 153); font-size: 12px; margin-right: 8px;
+}
+.lianjia-footer-simple {
+	background: rgb(245, 245, 245); height: 80px; text-align: center; color: rgb(153, 153, 153); line-height: 24px; padding-top: 60px; font-size: 12px;
+}
+.ui-autocomplete {
+	padding-top: 0px; position: relative; box-shadow: none;
+}
+.ui-autocomplete .ui-menu-item .hot-title {
+	width: 325px; height: 35px; overflow: hidden; display: inline-block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.searchs {
+	width: 100%; height: 48px; line-height: 48px; padding-top: 10px; background-image: url("img/new-version/tips-bg.png"); background-repeat: repeat-x; background-size: 18px 62px; background-color: rgb(241, 241, 241);
+}
+.searchs .search-txt {
+	width: 720px;
+}
+.searchs .search-txt .yjwd {
+	line-height: 33px;
+}
+.searchs .search-txt .yjwd a {
+	color: rgb(170, 170, 170); font-size: 12px; font-weight: 700;
+}
+.searchs .search-txt .yjwd a:hover {
+	text-decoration: none;
+}
+.searchs .search-txt .yjwd i {
+	padding-top: 11px; margin-right: 5px; float: left; display: block;
+}
+.searchs .search-txt .yjwd img {
+	width: 12px; height: 12px;
+}
+.searchs .search-txt .search-tab {
+	border-radius: 2px; border: 1px solid rgb(204, 204, 204); border-image: none; width: 500px; height: 35px; float: left; position: relative;
+}
+.searchs .search-txt .search-tab .suggest-wrap {
+	border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(204, 204, 204) rgb(204, 204, 204); padding: 0px; border-image: none; left: -1px; top: 5px; float: right; display: none; z-index: 99; box-shadow: 0px 2px 2px rgba(0,0,0,0.175); -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175); -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+}
+.searchs .search-txt .search-tab .suggest-wrap .title {
+	background: rgb(242, 244, 247); height: 35px; color: rgb(113, 138, 166); line-height: 35px; padding-left: 14px; font-weight: 700;
+}
+.searchs .search-txt .search-tab i.icon {
+	background: url("img/new-version/bg.png") -850px -51px; left: 60px; width: 7px; height: 4px; margin-top: 16px; margin-right: 8px; float: left; display: block; position: absolute; z-index: 98;
+}
+.searchs .search-txt .search-tab .check {
+	width: 70px; height: 35px; text-align: center; line-height: 35px; position: absolute; z-index: 98; cursor: pointer;
+}
+.searchs .search-txt .search-tab ul.tabs {
+	background: rgb(255, 255, 255); top: 0px; width: 70px; height: 35px; overflow: hidden; float: left; display: none; position: absolute; z-index: 99;
+}
+.searchs .search-txt .search-tab ul.tabs li {
+	height: 35px; text-align: center; line-height: 35px;
+}
+.searchs .search-txt .search-tab ul.tabs li:hover {
+	background: rgb(249, 249, 249);
+}
+.searchs .search-txt .search-tab ul.tabs li label {
+	cursor: pointer;
+}
+.searchs .search-txt .search-tab ul.tabs li a {
+	color: rgb(51, 51, 51);
+}
+.searchs .search-txt .search-tab .txt-serach {
+	left: 0px; top: 0px; position: absolute;
+}
+.searchs .search-txt .search-tab .txt-serach input {
+	background: rgb(255, 255, 255); border: 0px currentColor; border-image: none; top: 2px; width: 425px; height: 31px; line-height: 31px; padding-left: 75px; float: left; position: relative;
+}
+.searchs .search-txt .search-tab .txt-serach .hot-sug {
+	margin-top: 36px; margin-left: -1px; display: none; position: absolute; z-index: 999;
+}
+.searchs .search-txt .search-tab .txt-serach .hot-sug ul {
+	background: rgb(255, 255, 255); border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(204, 204, 204) rgb(204, 204, 204); border-image: none; width: 502px; display: none; box-sizing: border-box; box-shadow: 0px 2px 2px rgba(0,0,0,0.175); -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175); -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175); -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.searchs .search-txt .search-tab .txt-serach .hot-sug li {
+	padding: 0px 14px; height: 35px; line-height: 35px;
+}
+.searchs .search-txt .search-tab .txt-serach .hot-sug li.hot-name {
+	background: rgb(242, 244, 247); color: rgb(113, 138, 166); font-weight: 700;
+}
+.searchs .search-txt .search-tab .txt-serach .hot-sug li.hot-name:hover {
+	background: rgb(242, 244, 247);
+}
+.searchs .search-txt .search-tab .txt-serach .hot-sug li.del {
+	text-align: right; display: none; cursor: pointer;
+}
+.searchs .search-txt .search-tab .txt-serach .hot-sug li.del:hover {
+	background: rgb(255, 255, 255);
+}
+.searchs .search-txt .search-tab .txt-serach .hot-sug li a {
+	width: 100%; color: rgb(51, 51, 51); font-size: 14px; text-decoration: none; display: inline-block;
+}
+.searchs .search-txt .search-tab .txt-serach .hot-sug li:hover {
+	background: rgb(242, 242, 242);
+}
+.searchs .search-txt form {
+	width: 620px; float: left;
+}
+.searchs .search-txt .act-search {
+	background: rgb(199, 82, 75); border-radius: 2px; border: 1px solid rgb(170, 71, 65); border-image: none; width: 100px; height: 36px; color: rgb(255, 255, 255); line-height: 36px; font-size: 14px; font-weight: 700; margin-left: 10px; float: left;
+}
+.searchs .last {
+	width: 190px; color: rgb(153, 153, 153); line-height: 35px;
+}
+.searchs .last b {
+	color: rgb(153, 153, 153); font-weight: 700; float: left;
+}
+.searchs .last a {
+	width: 100px; color: rgb(153, 153, 153); overflow: hidden; display: inline-block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.searchs .last i {
+	background: url("img/new-version/bg.png") -845px -19px; width: 18px; height: 18px; margin-top: 8px; margin-right: 10px; float: left; display: inline-block;
+}
+.searchs .last .ditu {
+	background: rgb(245, 245, 245); padding: 0px 15px; border-radius: 2px; border: 1px solid rgb(191, 191, 191); border-image: none; height: 34px; color: rgb(51, 51, 51); line-height: 34px; font-size: 14px; font-weight: 700;
+}
+.searchs .last .ditu i {
+	background: url("img/new-version/bg.png") -1068px -615px; margin: 11px 5px 0px 0px; width: 13px; height: 13px;
+}
+.searchs .last .ditu a {
+	width: 81px; color: rgb(51, 51, 51); overflow: auto; display: block; white-space: inherit; -ms-text-overflow: inherit;
+}
+.savesearch {
+	top: -6px; width: 125px; right: 3px; display: none; position: absolute;
+}
+.savesearch .cunn {
+	display: none;
+}
+.savesearch .icon {
+	background: url("img/new-version/save-bg.png") -15px -77px; top: 38px; width: 16px; height: 11px; right: 53px; position: absolute; z-index: 10;
+}
+.savesearch ul {
+	background: rgb(255, 255, 255); border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(204, 204, 204) rgb(204, 204, 204); border-image: none; top: 42px; width: 502px; right: -4px; position: absolute; z-index: 9; box-shadow: 0px 2px 2px rgba(0,0,0,0.175); -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175); -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175); -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.savesearch span {
+	color: rgb(170, 170, 170); cursor: pointer;
+}
+.savesearch span label {
+	background: url("img/new-version/save-bg.png") -3px -79px; top: 21px; width: 10px; height: 6px; right: 10px; display: block; position: absolute;
+}
+.savesearch span label.down {
+	background: url("img/new-version/save-bg.png") -3px -92px;
+}
+.savesearch i {
+	background: none; float: left;
+}
+.savesearch li {
+	margin: 0px 15px; line-height: 35px; cursor: pointer;
+}
+.savesearch li.more {
+	text-align: center; color: rgb(153, 153, 153); font-size: 12px;
+}
+.savesearch li.title {
+	background: rgb(245, 245, 246); margin: 0px; padding: 0px 15px; height: 35px; color: rgb(153, 153, 153); line-height: 35px; font-weight: 700; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid; cursor: default;
+}
+.savesearch li.list {
+	height: 108px; overflow: hidden;
+}
+.savesearch .li {
+	height: 35px; color: rgb(51, 51, 51); line-height: 35px; overflow: hidden; padding-right: 30px; border-bottom-color: rgb(238, 238, 238); border-bottom-width: 1px; border-bottom-style: solid; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.savesearch .li .se {
+	background: rgb(241, 241, 241); margin: 7px 8px 7px 0px; padding: 10px 4px; border-radius: 1px; color: rgb(153, 153, 153); line-height: 0;
+}
+.savesearch .li .ti {
+	color: rgb(51, 51, 51); overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis; max-width: 100%;
+}
+.savesearch a {
+	color: rgb(85, 85, 85); font-size: 12px;
+}
+.intro {
+	background: rgb(241, 241, 241); height: 46px; line-height: 46px; border-top-color: rgb(238, 238, 238); border-top-width: 1px; border-top-style: solid;
+}
+.intro .container {
+	margin: 0px auto; width: 1000px;
+}
+.intro .l-txt {
+	font-size: 12px;
+}
+.intro .r-txt {
+	font-size: 12px;
+}
+.intro .l-txt i {
+	background: url("img/new-version/bg.png") no-repeat -12px -7px; top: 3px; width: 13px; height: 19px; display: inline-block; position: relative;
+}
+.intro .l-txt a {
+	color: rgb(85, 85, 85);
+}
+.intro .l-txt span {
+	color: rgb(85, 85, 85);
+}
+.intro .l-txt span.stp {
+	color: rgb(153, 153, 153); font-family: simsun;
+}
+.intro .l-txt .num {
+	color: rgb(228, 57, 60);
+}
+.intro .r-txt {
+	color: rgb(136, 136, 136);
+}
+.intro .r-txt .desc {
+	color: rgb(57, 172, 106);
+}
+.fix-right {
+	transition:0.3s ease-in-out; width: 37px; right: 20px; bottom: 50px; position: fixed; z-index: 100; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out;
+}
+.fix-right .tips {
+	background: rgb(249, 249, 249); border-radius: 2px; width: 37px; display: none; box-shadow: 0px 1px 3px rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.fix-right .tips li {
+	padding: 7px 0px; width: 37px; height: 24px; overflow: hidden; position: relative;
+}
+.fix-right .tips li span {
+	background-position: -594px -168px; transition:0.5s ease-in; left: -96px; top: 0px; width: auto; height: 37px; text-align: center; color: rgb(255, 255, 255); line-height: 37px; padding-right: 5px; font-size: 12px; position: absolute; min-width: 79px; opacity: 0; background-image: url("img/home/Sprite_Graphic.png"); -webkit-transition: all ease-in .5s; -moz-transition: all ease-in .5s; -o-transition: all ease-in .5s;
+}
+.fix-right .tips li span.erweima {
+	background: none; left: -94px; top: -1px; width: 82px; height: 88px; position: absolute;
+}
+.fix-right .tips li span.erweima img {
+	width: 82px; height: 88px;
+}
+.fix-right .tips li span.tel {
+	background-position: -717px -168px; left: -160px; width: 152px; padding-right: 5px;
+}
+.fix-right .tips li:hover {
+	background: rgb(57, 172, 106);
+}
+.fix-right .tips li:hover span {
+	left: -76px;
+}
+.fix-right .tips li:hover span.erweima {
+	left: -74px; top: -1px;
+}
+.fix-right .tips li:hover span.tel {
+	left: -150px;
+}
+.fix-right .tips li:hover label.erweima {
+	background-position: -651px -24px;
+}
+.fix-right .tips li:hover label.feedback {
+	background-position: -651px -60px; cursor: pointer;
+}
+.fix-right .tips li:hover label.im {
+	background-position: -651px -100px;
+}
+.fix-right .tips li:hover label.phone {
+	background-position: -651px -137px;
+}
+.fix-right .tips li:hover label.baodan {
+	background-position: -675px -100px;
+}
+.fix-right .tips li label {
+	background: url("img/home/Sprite_Graphic.png"); margin: 0px auto; width: 17px; height: 19px; display: block;
+}
+.fix-right .tips li label a {
+	width: 17px; height: 19px; display: block;
+}
+.fix-right .tips li label.erweima {
+	background-position: -622px -24px; margin-top: 3px;
+}
+.fix-right .tips li label.feedback {
+	background-position: -622px -60px;
+}
+.fix-right .tips li label.im {
+	background-position: -622px -100px; margin-top: 4px;
+}
+.fix-right .tips li label.phone {
+	background-position: -622px -137px; margin-top: 5px;
+}
+.fix-right .tips li label.baodan {
+	background-position: -697px -100px; margin-top: 3px;
+}
+.fix-right .has-ask {
+	background: url("img/home/Sprite_Graphic.png") -824px -1px; border-radius: 2px; width: 37px; height: 37px; overflow: hidden; margin-top: 9px; display: none; position: relative; cursor: pointer; box-shadow: 0px 1px 3px rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.fix-right .has-ask a {
+	width: 37px; height: 37px; color: rgb(173, 173, 175); display: block;
+}
+.fix-right .has-ask:hover {
+	background: url("img/home/Sprite_Graphic.png") -780px -1px;
+}
+.fix-right .has-ask:hover a {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+.fix-right .go-top {
+	background: rgb(249, 249, 249); border-radius: 2px; width: 37px; height: 24px; overflow: hidden; padding-top: 13px; margin-top: 9px; display: none; position: relative; cursor: pointer; box-shadow: 0px 1px 3px rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.fix-right .go-top:hover {
+	background: rgb(57, 172, 106);
+}
+.fix-right .go-top:hover i {
+	background: url("img/home/Sprite_Graphic.png") -633px -230px;
+}
+.fix-right .go-top:hover span {
+	transition:0.5s ease-in; left: -70px; -webkit-transition: all ease-in .5s; -moz-transition: all ease-in .5s; -o-transition: all ease-in .5s;
+}
+.fix-right .go-top i {
+	background: url("img/home/Sprite_Graphic.png") -604px -230px; margin: 0px auto; width: 17px; height: 9px; display: block;
+}
+.fix-right .go-top span {
+	background: url("img/home/Sprite_Graphic.png") -600px -168px; left: -90px; top: 0px; width: 74px; height: 37px; text-align: center; color: rgb(255, 255, 255); line-height: 37px; padding-right: 5px; font-size: 12px; display: block; position: absolute;
+}
+.sh-erweima {
+	background-position: 0px 0px; top: 10px; width: 215px; height: 175px; right: 173px; display: none; position: relative; background-image: url("img/new-version/sh-erweima.png");
+}
+.ewm-close {
+	background-position: 0px -239px; top: 30px; width: 31px; height: 31px; right: -20px; display: none; position: relative; z-index: 99; background-image: url("img/new-version/sh-erweima.png");
+}
+.feedback-box {
+	background: rgb(255, 255, 255); padding: 55px; border-radius: 2px; left: 50%; top: 50%; width: 415px; margin-top: -273px; margin-left: -263px; display: none; position: fixed; z-index: 10000; box-shadow: 0px 1px 3px rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.feedback-box h1 {
+	text-align: center; line-height: 40px; font-size: 20px;
+}
+.feedback-box p {
+	color: rgb(153, 153, 153); line-height: 20px; font-size: 12px;
+}
+.feedback-box .box {
+	padding-top: 15px;
+}
+.feedback-box .box span {
+	padding-bottom: 12px; font-weight: 700; display: block;
+}
+.feedback-box .box span label {
+	color: rgb(255, 0, 0); font-size: 12px; margin-left: 10px; display: none;
+}
+.feedback-box .box span i {
+	color: rgb(153, 153, 153);
+}
+.feedback-box .box input {
+	padding: 0px 8px; border-radius: 2px; border: 1px solid rgb(221, 221, 221); border-image: none; width: 182px; height: 34px; box-shadow: inset 1px 1px 3px rgba(0,0,0,0.05);
+}
+.feedback-box .box textarea {
+	padding: 8px; border-radius: 2px; border: 1px solid rgb(221, 221, 221); border-image: none; width: 397px; height: 120px; box-shadow: inset 1px 1px 3px rgba(0,0,0,0.05);
+}
+.feedback-box button {
+	background: rgb(57, 172, 106); border-radius: 2px; width: 180px; height: 43px; color: rgb(255, 255, 255); line-height: 43px; font-size: 16px; margin-top: 26px; cursor: pointer;
+}
+.feedback-box #tips {
+	color: rgb(228, 57, 60); font-size: 12px; margin-top: 20px; display: block;
+}
+.feedback-box .has {
+	font-size: 12px; margin-top: 40px;
+}
+.feedback-box .has a {
+	color: rgb(22, 136, 190);
+}
+.feedback-box .has i {
+	background: url("img/home/Sprite_Graphic.png") -722px -102px; top: 3px; width: 14px; height: 14px; margin-right: 3px; display: inline-block; position: relative;
+}
+.feedback-box .tab {
+	margin-top: 25px;
+}
+.feedback-box .tab span {
+	background: rgb(245, 245, 246); padding: 0px 15px; height: 34px; color: rgb(57, 64, 67); line-height: 34px; font-size: 14px; display: inline-block; cursor: pointer;
+}
+.feedback-box .tab span.check {
+	background: rgb(57, 64, 67); color: rgb(245, 245, 246); position: relative;
+}
+.feedback-box .tab span.check::after {
+	left: 50px; top: 34px; width: 0px; height: 0px; margin-left: -11px; border-top-color: rgb(57, 64, 67); border-right-color: transparent; border-left-color: transparent; border-top-width: 5px; border-right-width: 5px; border-left-width: 5px; border-top-style: solid; border-right-style: solid; border-left-style: solid; display: inline-block; position: absolute; content: "";
+}
+.feedback-box .complain .appeal .tel {
+	background: rgb(249, 244, 228); width: 100%; height: 50px; text-align: center; color: rgb(136, 123, 80); line-height: 50px; margin-top: 37px;
+}
+.feedback-box .complain .appeal .tel i {
+	background-position: -4px -47px; top: 1px; width: 9px; height: 14px; margin-right: 5px; display: inline-block; position: relative; background-image: url("img/zhuanti/tousu.png");
+}
+.feedback-box .complain .appeal b {
+	color: rgb(57, 64, 67); font-weight: 700; margin-top: 40px; display: block;
+}
+.feedback-box .complain .appeal p {
+	color: rgb(178, 178, 178); line-height: 23px;
+}
+.feedback-box .complain .appeal ul li {
+	height: 40px; line-height: 40px; border-bottom-color: rgb(245, 245, 245); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.feedback-box .complain .appeal ul li span {
+	color: rgb(57, 64, 67); font-size: 12px; display: inline-block;
+}
+.feedback-box .complain .appeal ul li span.time {
+	width: 142px;
+}
+.feedback-box .complain .appeal ul li span.name {
+	width: 60px;
+}
+.feedback-box .complain .appeal ul li span.phone {
+	width: 97px;
+}
+.feedback-box .complain .appeal ul li span.type {
+	width: 80px;
+}
+.feedback-box .complain .appeal ul li span.handle {
+	font-weight: 700;
+}
+.feedback-box .complain .appeal ul li span.finish {
+	font-weight: 700;
+}
+.feedback-box .complain .appeal ul li span.handle {
+	color: rgb(147, 135, 98);
+}
+.feedback-box .complain .appeal ul li span.finish {
+	color: rgb(0, 174, 102);
+}
+.feedback-box .complain .appeal a {
+	color: rgb(178, 178, 178); font-size: 12px; text-decoration: underline; margin-top: 10px; display: block;
+}
+.closebok {
+	top: -23px; width: 50px; right: -23px; position: absolute; z-index: 999;
+}
+.closebok img {
+	width: 50px;
+}
+.fix-right-v2 {
+	background: rgb(255, 255, 255); top: 0px; width: 38px; height: 100%; right: 0px; position: fixed; z-index: 1001; box-shadow: 0px 1px 10px rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+.fix-right-v2 table {
+	width: 100%; height: 100%;
+}
+.fix-right-v2 table {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; border-collapse: collapse; border-spacing: 0;
+}
+.fix-right-v2 td {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: none; border-collapse: collapse; border-spacing: 0;
+}
+.fix-right-v2 a {
+	width: 38px; overflow: hidden; font-size: 0px; display: block; cursor: pointer; background-image: url("img/home/sidebar_spriteV3.png");
+}
+.fix-right-v2 li {
+	margin: 7px 0px; position: relative;
+}
+.fix-right-v2 li span {
+	background: rgb(0, 174, 102); padding: 0px 14px; top: 0px; right: 48px; color: rgb(255, 255, 255); line-height: 38px; font-size: 12px; display: none; white-space: nowrap; position: absolute;
+}
+.fix-right-v2 li span i {
+	border-width: 5px; border-style: solid; border-color: transparent transparent transparent rgb(0, 174, 102); margin: -5px -10px 0px 0px; border-image: none; top: 50%; width: 0px; height: 0px; right: 0px; overflow: hidden; font-size: 0px; position: absolute;
+}
+.fix-right-v2 li .popup-qr {
+	background: rgb(255, 255, 255); padding: 8px; top: -30px;
+}
+.fix-right-v2 li .popup-qr i {
+	border-color: transparent transparent transparent rgb(255, 255, 255);
+}
+.fix-right-v2 li .popup-qr .qr-title {
+	text-align: center; color: rgb(0, 0, 0); line-height: 12px; padding-top: 8px; font-size: 12px; display: block;
+}
+.fix-right-v2 .myfav a {
+	height: 38px; line-height: 38px;
+}
+.fix-right-v2 .myfav span {
+	height: 38px; line-height: 38px;
+}
+.fix-right-v2 .myfav a {
+	background-position: -38px 0px;
+}
+.fix-right-v2 .myfav:hover a {
+	background-position: 0px 0px;
+}
+.fix-right-v2 .ask a {
+	height: 50px; line-height: 50px;
+}
+.fix-right-v2 .ask span {
+	height: 50px; line-height: 50px;
+}
+.fix-right-v2 .ask a {
+	background-position: -38px -38px;
+}
+.fix-right-v2 .ask:hover a {
+	background-position: 0px -38px;
+}
+.fix-right-v2 .sell a {
+	height: 50px; line-height: 50px;
+}
+.fix-right-v2 .sell span {
+	height: 50px; line-height: 50px;
+}
+.fix-right-v2 .sell a {
+	background-position: -38px -88px;
+}
+.fix-right-v2 .sell:hover a {
+	background-position: 0px -88px;
+}
+.fix-right-v2 .kefu a {
+	height: 38px; line-height: 38px;
+}
+.fix-right-v2 .kefu span {
+	height: 38px; line-height: 38px;
+}
+.fix-right-v2 .kefu a {
+	background-position: -38px -142px;
+}
+.fix-right-v2 .kefu:hover a {
+	background-position: 0px -142px;
+}
+.fix-right-v2 .baodan a {
+	height: 38px; line-height: 38px;
+}
+.fix-right-v2 .baodan span {
+	height: 38px; line-height: 38px;
+}
+.fix-right-v2 .baodan a {
+	background-position: -38px -186px;
+}
+.fix-right-v2 .baodan:hover a {
+	background-position: 0px -186px;
+}
+.fix-right-v2 .download a {
+	line-height: 38px;
+}
+.fix-right-v2 .download span {
+	line-height: 38px;
+}
+.fix-right-v2 .download a {
+	background-position: -38px -224px; height: 38px;
+}
+.fix-right-v2 .download:hover a {
+	background-position: 0px -224px;
+}
+.fix-right-v2 .phone a {
+	height: 38px; line-height: 38px;
+}
+.fix-right-v2 .phone span {
+	height: 38px; line-height: 38px;
+}
+.fix-right-v2 .phone a {
+	background-position: -38px -265px; cursor: default;
+}
+.fix-right-v2 .phone:hover a {
+	background-position: 0px -265px;
+}
+.fix-right-v2 .feedback a {
+	height: 38px; line-height: 38px;
+}
+.fix-right-v2 .feedback span {
+	height: 38px; line-height: 38px;
+}
+.fix-right-v2 .feedback a {
+	background-position: -38px -302px;
+}
+.fix-right-v2 .feedback:hover a {
+	background-position: 0px -302px;
+}
+.fix-right-v2 .gotop {
+	bottom: 50px; position: absolute;
+}
+.fix-right-v2 .gotop a {
+	height: 38px; line-height: 38px;
+}
+.fix-right-v2 .gotop span {
+	height: 38px; line-height: 38px;
+}
+.fix-right-v2 .gotop a {
+	background-position: -38px -338px;
+}
+.fix-right-v2 .gotop:hover a {
+	background-position: 0px -338px;
+}
+.fix-right-v2 .sidebar-line {
+	background: rgb(204, 204, 204); margin: 7px auto; width: 19px; height: 1px;
+}
+.wrap-video-all {
+	margin: 0px -50px 0px -80px; color: rgb(153, 153, 153); line-height: 36px; float: left; cursor: pointer;
+}
+.wrap-video-all img {
+	left: 0px; top: 10px; height: 14px; margin-right: 5px; position: relative;
+}
+.wrap-video-all a {
+	color: rgb(153, 153, 153);
+}
+.wrap-video-all:hover {
+	text-decoration: underline;
+}
+.video-box {
+	left: 0px; top: 0px; width: 100%; height: 100%; display: none; position: fixed; z-index: 1100;
+}
+.video-box .video-bg {
+	background: rgb(0, 0, 0); width: 100%; height: 100%; position: absolute; opacity: 0.5;
+}
+.video-box .video-embed {
+	background: rgb(255, 255, 255); margin: auto; padding: 20px; border-radius: 5px; left: 0px; top: 0px; width: 650px; height: 490px; right: 0px; bottom: 0px; float: left; position: absolute;
+}
+.video-box .video-embed .video-title {
+	width: 650px; margin-bottom: 16px; float: left;
+}
+.video-box .video-embed .video-title .video-app-download {
+	margin-left: 18px; position: relative;
+}
+.video-box .video-embed .video-title .video-app-download a {
+	color: rgb(34, 185, 122); cursor: pointer;
+}
+.video-box .video-embed .video-title .video-app-download a .video-logo-app {
+	left: 0px; top: 1px; height: 17px; margin-right: 7px; position: relative;
+}
+.video-box .video-embed .video-title .video-app-download a span {
+	position: relative;
+}
+.video-box .video-embed .video-title .video-app-download a:hover {
+	text-decoration: underline;
+}
+.video-box .video-embed .video-close {
+	top: -20px; width: 40px; right: -20px; position: absolute;
+}
+.advert .entry {
+	left: 0px; bottom: 0px; position: fixed; z-index: 100; cursor: pointer;
+}
+.advert .entry img {
+	width: 163px;
+}
+.advert .huodongBox {
+	left: 0px; top: 0px; width: 100%; height: 100%; position: fixed; z-index: 1011;
+}
+.advert .huodongBox img {
+	width: 750px;
+}
+.advert .huodongBox img.advertClose {
+	top: -20px; width: 42px; height: 42px; right: -20px; position: absolute; cursor: pointer;
+}
+.advert .huodong-wrap {
+	margin: -245px 0px 0px -335px; left: 50%; top: 50%; position: absolute;
+}
+a {
+	text-decoration: none;
+}
+a:focus {
+	
+}
+a:hover {
+	text-decoration: underline;
+}
+.mtl {
+	margin-top: 20px;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clear::after {
+	height: 0px; line-height: 0; clear: both; font-size: 0px; display: block; visibility: hidden; content: ".";
+}
+.clear {
+	display: inline-table;
+}
+* html .clear {
+	height: 1%;
+}
+.clear {
+	display: block;
+}
+.hide {
+	display: none;
+}
+::selection {
+	color: rgb(255, 255, 255); background-color: rgb(22, 136, 190);
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.fs14 {
+	font-size: 14px;
+}
+.ft-num {
+	font-family: Arial,sans-serif;
+}
+.wrapper {
+	margin: 0px auto; width: 1000px;
+}
+.wrapper-xinfang {
+	margin: 0px auto; width: 1150px;
+}
+.p {
+	display: inline-block; position: relative; -ms-zoom: 1;
+}
+.box-shadow {
+	box-shadow: 0px 2px 4px 0px rgba(158,158,158,0.2); -webkit-box-shadow: 0 2px 4px 0 rgba(158, 158, 158, 0.2); -moz-box-shadow: 0 2px 4px 0 rgba(158, 158, 158, 0.2);
+}
+@media screen
+{
+.lazyload {
+	opacity: 0;
+}
+.lazyload.loaded {
+	transition:opacity 0.3s ease-in; opacity: 1; -webkit-transition: opacity 0.3s ease-in; -moz-transition: opacity 0.3s ease-in; -o-transition: opacity 0.3s ease-in;
+}
+}
+.ico {
+	margin: -1px 5px 0px 0px; width: 20px; height: 19px; overflow: hidden; background-image: url("img/ico.png?v=20140828"); background-repeat: no-repeat; _background-image: url(img/ico_ie6.png?v=20140828);
+}
+.ico-place {
+	background-position: -65px 1px; margin-right: -5px;
+}
+.ico-place-white {
+	background-position: -100px -20px; width: 11px; height: 14px;
+}
+.ico-place-list {
+	background-position: -103px -42px; width: 11px; height: 14px;
+}
+.ico-all {
+	background-position: 0px 0px;
+}
+.ico-train {
+	background-position: -20px 0px;
+}
+.ico-map {
+	background-position: -40px 0px;
+}
+.ico-star {
+	background-position: -80px 0px;
+}
+.ico-arr-down {
+	background-position: -80px -20px; width: 15px; margin-right: 0px;
+}
+.ico-pic {
+	background: url("img/pic-ico.png?v=20140828") no-repeat; width: 11px; height: 11px;
+}
+.ico-arr-w-down {
+	background-position: -102px 0px; width: 15px;
+}
+.ico-hot {
+	background-position: -60px -20px; width: 10px; height: 11px;
+}
+.ico-new {
+	background-position: -60px -40px; width: 24px; height: 11px;
+}
+.icon-hui {
+	background: url("img/new-version/bg.png") no-repeat -150px -444px; width: 31px; height: 20px; display: inline-block;
+}
+.ico {
+	vertical-align: middle; display: inline-block; -ms-zoom: 1;
+}
+.ico-pic {
+	vertical-align: middle; display: inline-block; -ms-zoom: 1;
+}
+.suggest-wrap {
+	top: -1px; position: relative;
+}
+.suggest-wrap::before {
+	display: table; content: "";
+}
+.suggest-wrap::after {
+	display: table; content: "";
+}
+.suggest-wrap::after {
+	clear: both;
+}
+.suggest-wrap .home-ico {
+	margin: 4px 0px 0px 21px; display: none; position: absolute;
+}
+.ui-front {
+	z-index: 1002;
+}
+.ui-autocomplete {
+	padding: 0px 0px 15px; font-family: "Hiragino Sans GB","Î¢ÈíÑÅºÚ","Microsoft YaHei",SimHei,Tahoma,"ËÎÌåb8bÌå",SimSun,sans-serif; margin-top: 0px; border-top-color: currentColor; border-top-width: 0px; border-top-style: none; box-sizing: border-box; background-color: rgb(255, 255, 255); -webkit-box-sizing: border-box; -moz-box-sizing: border-box;
+}
+.ui-autocomplete .ui-menu-item {
+	margin: 0px; padding: 0px 20px; height: 35px; line-height: 35px; position: relative; cursor: pointer;
+}
+.ui-autocomplete .ui-menu-item .count b {
+	margin-left: 6px;
+}
+.ui-autocomplete .ui-menu-item a {
+	color: rgb(51, 51, 51); font-size: 14px; display: block;
+}
+.ui-autocomplete .ui-menu-item .sub-text {
+	height: 35px; color: rgb(153, 153, 153); font-size: 12px;
+}
+.ui-autocomplete .ui-menu-item .hot-title b {
+	font-weight: 700;
+}
+.ui-autocomplete .ui-state-focus {
+	background-color: rgb(249, 249, 249);
+}
+.ui-autocomplete .ui-state-focus a {
+	color: rgb(51, 51, 51);
+}
+.ui-autocomplete .ui-state-focus span {
+	color: rgb(51, 51, 51);
+}
+.ui-autocomplete .ui-state-focus .sub-text {
+	color: rgb(51, 51, 51);
+}
+.ui-autocomplete .ui-state-focus .count {
+	color: rgb(51, 51, 51);
+}
+.ui-helper-hidden-accessible {
+	margin: -1px; padding: 0px; border: 0px currentColor; border-image: none; width: 1px; height: 1px; overflow: hidden; position: absolute; clip: rect(0px, 0px, 0px, 0px);
+}
+.search-panel-common .suggest-wrap {
+	top: 31px;
+}
+.search-panel-common .suggest-wrap .ui-autocomplete {
+	padding: 1px; border-radius: 0px 0px 3px 3px; margin-top: 0px; -webkit-border-radius: 0 0 3px 3px; -moz-border-radius: 0 0 3px 3px;
+}
+.search-panel-common .suggest-wrap .ui-autocomplete .ui-menu-item {
+	padding: 0px 10px; height: 25px; line-height: 25px; cursor: pointer;
+}
+.search-panel-common .suggest-wrap .ui-autocomplete .ui-menu-item .sub-text {
+	display: none;
+}
+.search-panel-common .suggest-wrap .ui-autocomplete .ui-menu-item .count {
+	display: none;
+}
+.search-panel-common .suggest-wrap .count {
+	width: 60px; overflow: hidden;
+}
+.page-box a {
+	padding: 0px 12px; border: 1px solid rgb(176, 180, 185); border-image: none; height: 30px; text-align: center; color: rgb(85, 85, 85); line-height: 30px; overflow: hidden; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 12px; font-weight: 700; margin-left: 5px; vertical-align: middle; display: inline-block; -ms-zoom: 1;
+}
+.page-box a.on {
+	background: rgb(245, 245, 245); font-size: 14px; font-weight: bold; text-decoration: none; cursor: default;
+}
+.page-box span {
+	margin: 0px 8px 0px 13px; font-size: 16px;
+}
+.page-box .blue-btn {
+	background: url("img/btn-bg.png") repeat-x 0px -60px rgb(31, 107, 223); border-color: rgb(31, 102, 195); padding: 0px 30px; width: auto; color: rgb(255, 255, 255);
+}
+.page-box .blue-btn:hover {
+	background-position: 0px -90px; text-decoration: none;
+}
+.bounceIn {
+	animation-name: bounceIn; -webkit-animation-name: bounceIn;
+}
+.animated {
+	animation-duration: 0.5s; animation-fill-mode: both; -webkit-animation-duration: .5s; -webkit-animation-fill-mode: both;
+}
+.loninContaner {
+	position: relative; z-index: 1008;
+}
+.loninContaner .y_name {
+	background: url("img/new-version/bg.png") no-repeat -678px -23px; width: 255px; height: 50px; display: inline-block;
+}
+.loninContaner .overlay_bg {
+	left: 0px; top: 0px; width: 100%; height: 100%; display: none; position: fixed; z-index: 1003; opacity: 0.6; background-color: rgb(0, 0, 0);
+}
+.loninContaner .registered {
+	padding: 10px 0px 35px; width: 380px; text-align: right; color: rgb(85, 85, 85); margin-top: 7px;
+}
+.loninContaner .registered a {
+	color: rgb(228, 57, 60);
+}
+.loninContaner .panel_login {
+	border-radius: 4px; left: 50%; top: 50%; width: 400px; height: auto; padding-left: 50px; margin-top: -205px; margin-left: -246px; display: none; position: fixed; z-index: 10000; box-shadow: 1px 3px 14px rgba(0,0,0,0.3); background-color: rgb(243, 243, 243); -webkit-box-shadow: 1px 3px 14px rgba(0, 0, 0, 0.3); -moz-box-shadow: 1px 3px 14px rgba(0, 0, 0, 0.3); -o-box-shadow: 1px 3px 14px rgba(0, 0, 0, 0.3);
+}
+.loninContaner .panel_login .panel_info {
+	width: 350px; padding-top: 15px;
+}
+.loninContaner .panel_login .panel_reg {
+	width: 229px; height: 425px; background-color: rgb(243, 243, 243);
+}
+.loninContaner .panel_login .panel_bg {
+	background: url("img/new-version/sprite_lb.png") no-repeat 0px -101px; left: 0px; width: 209px; height: 69px; bottom: 0px; position: absolute;
+}
+.loninContaner .panel_login .panel_tab {
+	margin-top: 25px;
+}
+.loninContaner .panel_login .panel_tab .title {
+	height: 45px; line-height: 45px; margin-bottom: 10px;
+}
+.loninContaner .panel_login .panel_tab .title .fl {
+	color: rgb(51, 51, 51); font-size: 20px;
+}
+.loninContaner .panel_login .panel_tab .title label {
+	color: rgb(153, 153, 153);
+}
+.loninContaner .panel_login .panel_tab .title label a {
+	color: rgb(228, 57, 60);
+}
+.loninContaner .panel_login .panel_tab span {
+	border-width: 1px 0px 1px 1px; border-style: solid none solid solid; border-color: rgb(245, 245, 245) currentColor rgb(208, 208, 208) rgb(245, 245, 245); border-radius: 4px; border-image: none; width: 189px; height: 47px; text-align: center; color: rgb(153, 153, 153); line-height: 47px; font-size: 16px; float: left; display: block; cursor: pointer;
+}
+.loninContaner .panel_login .panel_tab span a {
+	color: rgb(153, 153, 153); text-decoration: none;
+}
+.loninContaner .panel_login .panel_tab span.checked {
+	border-width: 1px; border-style: solid; border-color: rgb(208, 208, 208) rgb(208, 208, 208) rgb(245, 245, 245); border-image: none; color: rgb(85, 85, 85);
+}
+.loninContaner .panel_login .panel_tab .show-error {
+	padding: 0px; height: auto; display: none;
+}
+.loninContaner .panel_login .panel_tab .show-error dd {
+	top: 0px; color: rgb(238, 86, 48); display: block;
+}
+.loninContaner .panel_login .panel_tab li {
+	padding: 6px 0px; height: 33px; color: rgb(85, 85, 85); clear: both; position: relative;
+}
+.loninContaner .panel_login .panel_tab li .mind-login {
+	margin-right: 6px; float: none;
+}
+.loninContaner .panel_login .panel_tab li.pwd {
+	background: rgb(255, 255, 255);
+}
+.loninContaner .panel_login .panel_tab li.userName {
+	background: rgb(255, 255, 255);
+}
+.loninContaner .panel_login .panel_tab li i {
+	background: url("img/user/sprite_user.png") no-repeat; left: 15px; width: 14px; height: 19px; margin-top: 6px; margin-right: 20px; float: left; display: inline-block; position: absolute;
+}
+.loninContaner .panel_login .panel_tab li.userName {
+	margin-bottom: 10px;
+}
+.loninContaner .panel_login .panel_tab li.userName i {
+	background-position: -113px 0px;
+}
+.loninContaner .panel_login .panel_tab li.pwd i {
+	background-position: -113px -25px;
+}
+.loninContaner .panel_login .panel_tab li.checkVerimg {
+	padding: 0px; margin-top: 10px;
+}
+.loninContaner .panel_login .panel_tab li.checkVerimg i {
+	background-position: -136px -25px; margin: 0px; top: 10px;
+}
+.loninContaner .panel_login .panel_tab li.checkVerimg .ver-img {
+	width: 151px; height: 45px; line-height: 45px; padding-left: 45px; float: left;
+}
+.loninContaner .panel_login .panel_tab li.checkVerimg .verImg {
+	width: 145px; height: 45px; float: right;
+}
+.loninContaner .panel_login .panel_tab li.li_01 {
+	height: 23px; line-height: 29px;
+}
+.loninContaner .panel_login .panel_tab li input {
+	padding: 0px; border: 0px currentColor; border-image: none; float: right;
+}
+.loninContaner .panel_login .panel_tab li input.password {
+	margin-bottom: 8px;
+}
+.loninContaner .panel_login .panel_tab li input.the_input:focus {
+	border-color: rgb(160, 160, 160); transition:0.3s ease-in-out; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out;
+}
+.loninContaner .panel_login .panel_tab li .the_input {
+	width: 306px; height: 33px; color: rgb(153, 153, 153); line-height: 33px; font-size: 14px; margin-bottom: 6px;
+}
+.loninContaner .panel_login .panel_tab li .y_validation {
+	width: 210px; height: 39px; color: rgb(153, 153, 153); padding-left: 15px; box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1); -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.loninContaner .panel_login .panel_tab li img {
+	width: 85px; height: 41px; float: right;
+}
+.loninContaner .panel_login .panel_tab li a {
+	color: rgb(85, 85, 85); float: right;
+}
+.loninContaner .panel_login .panel_tab .check01 {
+	border: 0px currentColor; border-image: none; top: 2px; margin-right: 5px; position: relative;
+}
+.loninContaner .panel_login .panel_tab .check01:focus {
+	border: currentColor; border-image: none;
+}
+.loninContaner .panel_login .panel_tab .login-user-btn {
+	background: rgb(57, 172, 106); border: 0px currentColor; border-image: none; width: 350px; height: 45px; text-align: center; color: rgb(255, 255, 255); line-height: 45px; font-size: 16px; display: inline-block; cursor: pointer;
+}
+.loninContaner .panel_login .panel_tab .login-agent-btn {
+	background: rgb(57, 172, 106); border: 0px currentColor; border-image: none; width: 350px; height: 45px; text-align: center; color: rgb(255, 255, 255); line-height: 45px; font-size: 16px; display: inline-block; cursor: pointer;
+}
+.loninContaner .panel_login .panel_tab .login-user-btn:hover {
+	background: rgb(60, 181, 112); text-decoration: none;
+}
+.loninContaner .panel_login .panel_tab .login-agent-btn:hover {
+	background: rgb(60, 181, 112); text-decoration: none;
+}
+.loninContaner .panel_login .fr {
+	position: relative;
+}
+.loninContaner .panel_login .claseDialogBtn {
+	background: url("img/new-version/bg.png") no-repeat -955px -47px; top: 15px; width: 19px; height: 19px; right: 15px; display: inline-block; position: absolute; cursor: pointer;
+}
+.loninContaner .panel_login .panel_tab li.y_error dd {
+	top: -10px; color: rgb(238, 86, 48); clear: both; display: block; position: relative;
+}
+.loninContaner .panel_login .panel_tab li dd {
+	display: none;
+}
+.loninContaner .panel_login .panel_tab .dis {
+	display: block;
+}
+.loninContaner .panel_login .panel_tab .undis {
+	display: none;
+}
+.loninContaner #con_login_agent {
+	display: none;
+}
+.laisuzhou-class {
+	color: rgb(85, 85, 85) !important; text-decoration: none; cursor: text;
+}
+.laisuzhou-class:hover {
+	text-decoration: none;
+}
+.laisuzhou-class:hover span {
+	text-decoration: none !important;
+}

@@ -1,0 +1,27 @@
+.top {
+	background: rgb(255, 255, 255); margin: 0px auto; width: 1066px; height: 299px;
+}
+.banner_4 {
+	background: url("../images/q.png"); width: 1066px; height: 277px;
+}
+.logo_r {
+	background: url("../images/dsffds.png") no-repeat; margin: 152px 520px 47px 69px; width: 477px; height: 60px; float: left;
+}
+.nav {
+	background: url("../images/nav_F.png") no-repeat; width: 1066px; height: 40px; margin-right: 28px; margin-left: 27px; float: left;
+}
+.nav_s {
+	color: rgb(255, 255, 255); font-family: Microsoft Sans Serif; font-size: 14px;
+}
+.top .banner_4 .nav .nav_s li {
+	width: 125px; height: 38px; text-align: center; line-height: 38px; float: left; display: block;
+}
+.top .banner_4 .nav .nav_s li a {
+	color: rgb(255, 255, 255);
+}
+#foot {
+	background: url("../images/qiantai/img_bottom.jpg"); margin: 0px auto; width: 100%; height: 100px; padding-top: 20px;
+}
+#foot p {
+	height: 30px; text-align: center; color: rgb(255, 255, 255); line-height: 30px;
+}

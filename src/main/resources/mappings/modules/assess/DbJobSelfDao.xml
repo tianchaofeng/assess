@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starsoft.ezicloud.modules.assess.dao.DbJobSelfDao">
+    
+	<sql id="dbJobSelfColumns">
+		a.id AS "id",
+		a.job_id AS "jobId.id",
+		a.target AS "target.id",
+		a.participant AS "participant.id",
+		a.score AS "score",
+		a.version AS "version",
+		a.grade AS "grade",
+		a.discipline AS "discipline.id",
+		dc.name AS "discipline.def1",
+		a.ce AS "ce",
+		a.bookunit AS "bookunit",
+		a.chapter AS "chapter",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag",
+		a.def1 AS "def1",
+		a.def2 AS "def2",
+		a.def3 AS "def3",
+		a.def4 AS "def4",
+		a.def5 AS "def5",
+		b.name AS "name",
+		u1.name AS "target.name",
+		u2.name AS "participant.name",
+		u2.user_type As "participant.userType",
+		b.questionnaire_id AS "questionnaireId",
+		b.start_date AS "startDate",
+		b.end_date AS "endDate"
+	</sql>
+	
+	<sql id="dbJobSelfJoins">
+	left join db_job b on a.job_id = b.id
+	left join sys_user u1 on a.target = u1.id
+	left join sys_user u2 on a.participant = u2.id
+	LEFT JOIN db_class_course dcc ON dcc.id=a.discipline
+	LEFT JOIN db_courseinfo dc ON dc.id=dcc.discipline
+	</sql>
+    
+	<select id="get" resultType="DbJobSelf">
+		SELECT 
+			<include refid="dbJobSelfColumns"/>
+		FROM db_job_self a
+		<include refid="dbJobSelfJoins"/>
+		WHERE a.id = #{id} 
+	</select>
+	
+	<select id="getByJobId" resultType="DbJobSelf">
+		SELECT 
+			<include refid="dbJobSelfColumns"/>
+		FROM db_job_self a
+		<include refid="dbJobSelfJoins"/>
+		WHERE a.job_id = #{id} 
+	</select>
+	
+	<select id="findList" resultType="DbJobSelf">
+		SELECT 
+			<include refid="dbJobSelfColumns"/>
+		FROM db_job_self a
+		<include refid="dbJobSelfJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="jobId != null and jobId != '' ">
+				AND  a.job_id = #{jobId.id}
+			</if>
+			<if test="def2 != null and def2 != '' ">
+				AND  a.def2 = #{def2}
+			</if>
+			<if test="target != null and target != '' and participant != null and participant != ''">
+				AND  a.target = #{target.id} OR a.participant = #{participant.id}
+			</if>
+			<if test="target != null and target != '' and (participant == null or participant == '')">
+				AND  a.target = #{target.id}
+			</if>
+			<if test="participant != null and participant != '' and (target == null or target == '') ">
+				AND  a.participant = #{participant.id}
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="DbJobSelf">
+		SELECT 
+			<include refid="dbJobSelfColumns"/>
+		FROM db_job_self a
+		<include refid="dbJobSelfJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO db_job_self(
+			id,
+			job_id,
+			target,
+			participant,
+			score,
+			version,
+			grade,
+			discipline,
+			ce,
+			bookunit,
+			chapter,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag,
+			def1,
+			def2,
+			def3,
+			def4,
+			def5
+		) VALUES (
+			#{id},
+			#{jobId.id},
+			#{target.id},
+			#{participant.id},
+			#{score},
+			#{version},
+			#{grade},
+			#{discipline.id},
+			#{ce},
+			#{bookunit},
+			#{chapter},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag},
+			#{def1},
+			#{def2},
+			#{def3},
+			#{def4},
+			#{def5}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE db_job_self SET 	
+			job_id = #{jobId.id},
+			target = #{target.id},
+			participant = #{participant.id},
+			score = #{score},
+			version = #{version},
+			grade = #{grade},
+			discipline = #{discipline.id},
+			ce = #{ce},
+			bookunit = #{bookunit},
+			chapter = #{chapter},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks},
+			def1 = #{def1},
+			def2 = #{def2},
+			def3 = #{def3},
+			def4 = #{def4},
+			def5 = #{def5}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE db_job_self SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	<update id="deleteById">
+		UPDATE db_job_self SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE job_id = #{jobId.id}
+	</update>
+	
+</mapper>

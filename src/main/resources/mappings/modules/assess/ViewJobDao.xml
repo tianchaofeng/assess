@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starsoft.ezicloud.modules.assess.dao.ViewJobDao">
+    
+	<sql id="viewJobColumns">
+		a.job AS "job",
+		a.course AS "course",
+		a.teacher AS "teacher",
+		a.area AS "area",
+		a.school AS "school",
+		a.start_date AS "startDate",
+		a.end_date AS "endDate",
+		a.score AS "score",
+		a.version AS "version",
+		a.grade AS "grade",
+		a.ce AS "ce",
+		a.bookunit AS "bookunit",
+		a.chapter AS "chapter"
+	</sql>
+	
+	<sql id="viewJobJoins">
+	</sql>
+    
+	<select id="get" resultType="ViewJob">
+		SELECT 
+			<include refid="viewJobColumns"/>
+		FROM view_job a
+		<include refid="viewJobJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="ViewJob">
+		SELECT 
+			<!-- <include refid="viewJobColumns"/> -->
+			${sqlMap.dsf}
+		FROM view_job a
+		<include refid="viewJobJoins"/>
+		<where>
+			<!-- <if test="job != null and job != ''">
+				AND a.job = #{job}
+			</if> -->
+			<if test="course != null and course != ''">
+				AND a.course LIKE 
+				    <if test="dbName == 'oracle'">'%'||#{course}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{course}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{course},'%')</if>
+			</if>
+			<if test="teacher != null and teacher != ''">
+				AND a.teacher LIKE
+					<if test="dbName == 'oracle'">'%'||#{teacher}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{teacher}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{teacher},'%')</if>
+			</if>
+			<if test="area != null and area != ''">
+				AND a.area LIKE
+					<if test="dbName == 'oracle'">'%'||#{area}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{area}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{area},'%')</if>
+			</if>
+			<if test="school != null and school != ''">
+				AND a.school LIKE
+					<if test="dbName == 'oracle'">'%'||#{school}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{school}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{school},'%')</if>
+			</if>
+			<if test="startDate != null and startDate != ''">
+				AND a.end_date &gt;= #{startDate}
+			</if>
+			<if test="endDate != null and endDate != ''">
+				AND a.start_date &lt;= #{endDate}
+			</if>
+			
+		</where>
+		   <if test="def2 !=null and def2 !='' ">
+				GROUP BY ${sqlMap.group}
+		   </if>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findListgroup" resultType="ViewJob">
+		SELECT 
+		<if test="cloums != null and cloums != ''">
+				#{cloums},
+		</if>
+		a.start_date AS startDate,
+		a.end_date AS endDate,
+		avg(a.score) AS score
+		FROM view_job a
+		<!-- <where>
+			
+			<if test="job != null and job != ''">
+				AND a.job = #{job}
+			</if>
+			<if test="course != null and course != ''">
+				AND a.course = #{course}
+			</if>
+			<if test="teacher != null and teacher != ''">
+				AND a.teacher = #{teacher}
+			</if>
+			<if test="area != null and area != ''">
+				AND a.area = #{area}
+			</if>
+			<if test="school != null and school != ''">
+				AND a.school = #{school}
+			</if>
+			<if test="startDate != null and startDate != ''">
+				AND a.end_date &gt;= #{startDate}
+			</if>
+			<if test="endDate != null and endDate != ''">
+				AND a.start_date &lt;= #{endDate}
+			</if>
+		</where> -->
+		<where>
+		    <if test="conditions != null and conditions != ''">
+			 #{conditions}
+			</if>
+		</where> 
+		<if test="group != null and group != ''">
+				group by  #{group}
+		</if>
+		<if test="order != null and order != ''">
+				order by #{order}	
+		</if>
+		<if test="ord != null and ord != ''">
+				 #{ord} 
+		</if>
+	</select>
+	
+	<select id="findAllList" resultType="ViewJob">
+		SELECT 
+			<include refid="viewJobColumns"/>
+		FROM view_job a
+		<include refid="viewJobJoins"/>
+		<where>
+			
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			</otherwise>
+		</choose>
+	</select>
+	
+	
+	
+</mapper>

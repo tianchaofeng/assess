@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starsoft.ezicloud.modules.assess.dao.DbAssessIndexDao">
+    
+	<sql id="dbAssessIndexColumns">
+		a.id AS "id",
+		a.level_id AS "levelId.id",
+		a.content AS "content",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag",
+		a.def1 AS "def1",
+		a.def2 AS "def2",
+		a.def3 AS "def3",
+		a.def4 AS "def4",
+		a.def5 AS "def5",
+		l.name AS "levelId.name"
+	</sql>
+	
+	<sql id="dbAssessIndexJoins">
+	LEFT JOIN db_level l ON l.id = a.level_id
+	</sql>
+    
+	<select id="get" resultType="DbAssessIndex">
+		SELECT 
+			<include refid="dbAssessIndexColumns"/>
+		FROM db_assess_index a
+		<include refid="dbAssessIndexJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="DbAssessIndex">
+		SELECT 
+			<include refid="dbAssessIndexColumns"/>
+		FROM db_assess_index a
+		
+		left join db_level l on  l.id = a.level_id
+		left join db_level l3 on  l.parent_id = l3.id
+		left join db_level l2 on  l3.parent_id = l2.id
+		left join db_level l1 on  l2.parent_id = l1.id
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="levelId != null and levelId.id != null and levelId.id != ''">
+				AND a.level_id = #{levelId.id}
+			</if>
+			<if test="def1 != null and def1 != ''">
+				AND l.parent_ids like
+				    <if test="dbName == 'oracle'">'%'||#{def1}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{def1}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{def1},'%')</if>
+			</if>
+			<if test="list != null and list.size() > 0">
+				AND a.id not in
+				 <foreach item="item" collection="list" separator="," open="(" close=")" index="">
+				 	#{item}
+				 </foreach>
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+			ORDER BY l1.sort, l2.sort,l3.sort,l.sort 
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="DbAssessIndex">
+		SELECT 
+			<include refid="dbAssessIndexColumns"/>
+		FROM db_assess_index a
+		<include refid="dbAssessIndexJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO db_assess_index(
+			id,
+			level_id,
+			content,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag,
+			def1,
+			def2,
+			def3,
+			def4,
+			def5
+		) VALUES (
+			#{id},
+			#{levelId.id},
+			#{content},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag},
+			#{def1},
+			#{def2},
+			#{def3},
+			#{def4},
+			#{def5}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE db_assess_index SET 	
+			level_id = #{levelId.id},
+			content = #{content},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks},
+			def1 = #{def1},
+			def2 = #{def2},
+			def3 = #{def3},
+			def4 = #{def4},
+			def5 = #{def5}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE db_assess_index SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

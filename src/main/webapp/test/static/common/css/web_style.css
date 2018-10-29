@@ -1,0 +1,94 @@
+/*内涵段子头像*/
+.head_img{
+	width: 30px;
+	height: 30px;
+	/*圆角边框*/
+	border-radius: 50%;
+	float: left;
+	margin-right: 15px;
+}
+/*内涵段子内容*/
+.joke_content{
+	clear: both;
+	padding: 15px;
+}
+.joke_content p{
+	line-height: 25px;
+}
+/*内涵段子工具条图片*/
+.joke_tools img{
+	width: 24px;
+	height: 24px;
+}
+/*热门标签*/
+.hot_lable button{
+	margin-top: 5px;
+}
+/*首页本周热点*/
+.week_hot{
+	padding: 10px;
+	margin-bottom: 20px;
+}
+/*首页本周热点标题*/
+.week_hot_title{
+	padding-top: 5px;
+	padding-left: 8px;
+	font-size: large;
+}
+/*首页文章图面*/
+.article_img{
+	width: 265px;
+	height: 160px;
+}
+/*文章详情页标题*/
+.artile_heading{
+	text-align: center;
+	margin-bottom: 40px;
+}
+/*文章详情页标题角标*/
+.artile_heading small{
+	margin-left: 20px;
+}
+/*文章详情页标题图片*/
+.artile_heading img{
+	width: 500px;
+	width: 400px;
+}
+/*文章详情页作者*/
+.author{
+	font-size: large;
+	font-weight: 700;
+}
+/*文章详情页内容*/
+.article_content p{
+	line-height: 40px;
+}
+/*文章底部*/
+.artile_footer{
+	text-align: center;
+	margin-bottom: 20px;
+}
+/*文章底部分享图标*/
+.artile_footer img{
+	width: 24px;
+	height: 24ox;
+}
+/*文章详情页相关推荐内容*/
+.recommend_content{
+	padding: 10px;
+}
+/*文章详情页评论人头像*/
+.article_reply img{
+	width: 35px;
+	height: 35px;
+	/*圆角边框*/
+	/*border-radius: 50%;*/
+	margin-right: 15px;
+}
+/*发布段子输入框*/
+.joke_content_input{
+	/*禁止拖拽*/
+	resize: none;
+	/*禁止滚动*/
+	overflow: hidden;
+}

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starsoft.ezicloud.modules.assess.dao.DbClassCourseDao">
+    
+	<sql id="dbClassCourseColumns">
+		a.id AS "id",
+		a.version AS "version",
+		a.grade AS "grade",
+		a.discipline AS "discipline.id",
+		dc.name AS "discipline.name",
+		a.ce AS "ce",
+		a.bookunit AS "bookunit",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag",
+		a.def1 AS "def1",
+		a.def2 AS "def2",
+		a.def3 AS "def3",
+		a.def4 AS "def4",
+		a.def5 AS "def5"
+	</sql>
+	
+	<sql id="dbClassCourseJoins">
+	LEFT JOIN db_courseinfo dc ON dc.id=a.discipline
+	</sql>
+    
+	<select id="get" resultType="DbClassCourse">
+		SELECT 
+			<include refid="dbClassCourseColumns"/>
+		FROM db_class_course a
+		<include refid="dbClassCourseJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="DbClassCourse">
+		SELECT 
+			<include refid="dbClassCourseColumns"/>
+		FROM db_class_course a
+		<include refid="dbClassCourseJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="grade != null and grade != ''">
+				AND a.grade LIKE 
+					<if test="dbName == 'oracle'">'%'||#{grade}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{grade}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{grade},'%')</if>
+			</if>
+			<if test="def1 != null and def1 != ''">
+				AND dc.name  = #{def1}
+			</if>
+			<if test="ce != null and ce != ''">
+				AND a.ce LIKE 
+					<if test="dbName == 'oracle'">'%'||#{ce}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{ce}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{ce},'%')</if>
+			</if>
+			<if test="bookunit != null and bookunit != ''">
+				AND a.bookunit LIKE 
+					<if test="dbName == 'oracle'">'%'||#{bookunit}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{bookunit}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{bookunit},'%')</if>
+			</if>
+		</where>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="DbClassCourse">
+		SELECT 
+			<include refid="dbClassCourseColumns"/>
+		FROM db_class_course a
+		<include refid="dbClassCourseJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO db_class_course(
+			id,
+			version,
+			grade,
+			discipline,
+			ce,
+			bookunit,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag,
+			def1,
+			def2,
+			def3,
+			def4,
+			def5
+		) VALUES (
+			#{id},
+			#{version},
+			#{grade},
+			#{discipline.id},
+			#{ce},
+			#{bookunit},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag},
+			#{def1},
+			#{def2},
+			#{def3},
+			#{def4},
+			#{def5}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE db_class_course SET 	
+			version = #{version},
+			grade = #{grade},
+			discipline = #{discipline.id},
+			ce = #{ce},
+			bookunit = #{bookunit},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks},
+			def1 = #{def1},
+			def2 = #{def2},
+			def3 = #{def3},
+			def4 = #{def4},
+			def5 = #{def5}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE db_class_course SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

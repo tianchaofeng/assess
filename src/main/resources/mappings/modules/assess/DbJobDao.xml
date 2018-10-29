@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.starsoft.ezicloud.modules.assess.dao.DbJobDao">
+    
+	<sql id="dbJobColumns">
+		a.id AS "id",
+		a.name AS "name",
+		a.type AS "type",
+		a.questionnaire_id AS "questionnaireId.id",
+		dq.name AS "questionnaireId.name",
+		a.evaluation_target AS "evaluationTarget.id",
+		su.name AS "evaluationTarget.name",
+		a.team_id AS "teamId.id",
+		su2.name AS "teamId.name",
+		a.participant_id AS "participantId.id",
+		su1.name AS "participantId.name",
+		a.start_date AS "startDate",
+		a.end_date AS "endDate",
+		a.create_by AS "createBy.id",
+		a.create_date AS "createDate",
+		a.update_by AS "updateBy.id",
+		a.update_date AS "updateDate",
+		a.remarks AS "remarks",
+		a.del_flag AS "delFlag",
+		a.version AS "version",
+		a.grade AS "grade",
+		a.discipline AS "discipline.id",
+		dc.name AS "discipline.def1",
+		a.ce AS "ce",
+		a.bookunit AS "bookunit",
+		a.chapter AS "chapter",
+		a.def1 AS "def1",
+		a.def2 AS "def2",
+		a.def3 AS "def3",
+		a.def4 AS "def4",
+		a.def5 AS "def5"
+	</sql>
+	
+	<sql id="dbJobJoins">
+	LEFT JOIN sys_user su ON a.evaluation_target=su.id
+	LEFT JOIN sys_user su1 ON a.participant_id=su1.id
+	LEFT JOIN db_evaluating_team su2 ON a.team_id=su2.id
+	LEFT JOIN db_questionnaire dq ON dq.id=a.questionnaire_id
+	LEFT JOIN db_class_course dcc ON dcc.id=a.discipline
+	LEFT JOIN db_courseinfo dc ON dc.id=dcc.discipline
+	</sql>
+    
+	<select id="get" resultType="DbJob">
+		SELECT 
+			<include refid="dbJobColumns"/>
+		FROM db_job a
+		<include refid="dbJobJoins"/>
+		WHERE a.id = #{id}
+	</select>
+	
+	<select id="findList" resultType="DbJob">
+		SELECT 
+			<include refid="dbJobColumns"/>
+		FROM db_job a
+		<include refid="dbJobJoins"/>
+		<if test="def4 != null and def4 != ''  ">
+		left join db_evaluating_team_member m on  m.team_id  =su2.id
+		</if>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+			<if test="name != null and name != ''">
+				AND a.name LIKE 
+					<if test="dbName == 'oracle'">'%'||#{name}||'%'</if>
+					<if test="dbName == 'mssql'">'%'+#{name}+'%'</if>
+					<if test="dbName == 'mysql'">concat('%',#{name},'%')</if>
+			</if>
+			<if test="def3 != null and def3 != ''">
+				AND  a.def3 = #{def3} 
+			</if>
+			<if test="evaluationTarget != null and evaluationTarget != '' and createBy != null and createBy != ''">
+				AND  a.evaluation_target = #{evaluationTarget.id} OR a.create_by = #{createBy.id}
+			</if>
+			<if test="evaluationTarget != null and evaluationTarget != '' and (createBy == null or createBy == '')">
+				AND  a.evaluation_target = #{evaluationTarget.id}
+			</if>
+			<if test="createBy != null and createBy != '' and (evaluationTarget == null or evaluationTarget == '') ">
+				AND  a.create_by = #{createBy.id}
+			</if>
+			<if test="def4 != null and def4 != ''  ">
+			AND (a.id in
+        (  select s.job_id  from db_job_self s where s.participant = #{def4} ) and m.member_id =  #{def4} 
+				OR ( a.create_by = #{def4}  or a.evaluation_target =  #{def4} ))
+			</if>
+			
+			<if test="discipline != null and discipline != ''">
+				AND su.name LIKE
+				<if test="dbName == 'mysql'">concat('%',#{discipline.def2},'%')</if>
+			</if>
+			<if test="discipline != null and discipline != ''">
+				AND dc.name LIKE
+				<if test="dbName == 'mysql'">concat('%',#{discipline.def1},'%')</if>
+			</if>
+			<if test="version != null and version != ''">
+				AND a.version LIKE
+				<if test="dbName == 'mysql'">concat('%',#{version},'%')</if>
+			</if>
+			<if test="grade != null and grade != ''">
+				AND a.grade LIKE
+				<if test="dbName == 'mysql'">concat('%',#{grade},'%')</if>
+			</if>
+			<if test="bookunit != null and bookunit != ''">
+				AND a.bookunit LIKE
+				<if test="dbName == 'mysql'">concat('%',#{bookunit},'%')</if>
+			</if>
+			<if test="ce != null and ce != ''">
+				AND a.ce LIKE
+				<if test="dbName == 'mysql'">concat('%',#{ce},'%')</if>
+			</if>
+			
+		</where>
+		<if test="def4 != null and def4 != ''  ">
+		GROUP BY a.id
+		</if>
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="findAllList" resultType="DbJob">
+		SELECT 
+			<include refid="dbJobColumns"/>
+		FROM db_job a
+		<include refid="dbJobJoins"/>
+		<where>
+			a.del_flag = #{DEL_FLAG_NORMAL}
+		</where>		
+		<choose>
+			<when test="page !=null and page.orderBy != null and page.orderBy != ''">
+				ORDER BY ${page.orderBy}
+			</when>
+			<otherwise>
+				ORDER BY a.update_date DESC
+			</otherwise>
+		</choose>
+	</select>
+	<select id="avg" resultType="java.util.HashMap">
+		SELECT
+			c.content as name,
+			AVG(b.score) AS 'avg' 
+		FROM
+			re_job_selef_assess b
+			LEFT JOIN db_assess_index c ON c.id = b.assess_id
+		WHERE
+			b.job_self_id IN (
+				SELECT
+					a.id AS id
+				FROM
+					db_job_self a
+				WHERE
+					a.job_id = #{jobId}
+					and a.def2 = "2"
+			)
+		GROUP BY
+			b.assess_id
+
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO db_job(
+			id,
+			name,
+			type,
+			questionnaire_id,
+			evaluation_target,
+			team_id,
+			participant_id,
+			start_date,
+			end_date,
+			create_by,
+			create_date,
+			update_by,
+			update_date,
+			remarks,
+			del_flag,
+			version,
+			grade,
+			discipline,
+			ce,
+			bookunit,
+			chapter,
+			def1,
+			def2,
+			def3,
+			def4,
+			def5
+		) VALUES (
+			#{id},
+			#{name},
+			#{type},
+			#{questionnaireId.id},
+			#{evaluationTarget.id},
+			#{teamId.id},
+			#{participantId.id},
+			#{startDate},
+			#{endDate},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate},
+			#{remarks},
+			#{delFlag},
+			#{version},
+			#{grade},
+			#{discipline.id},
+			#{ce},
+			#{bookunit},
+			#{chapter},
+			#{def1},
+			#{def2},
+			#{def3},
+			#{def4},
+			#{def5}
+		)
+	</insert>
+	
+	<update id="update">
+		UPDATE db_job SET 	
+			name = #{name},
+			type = #{type},
+			questionnaire_id = #{questionnaireId.id},
+			evaluation_target = #{evaluationTarget.id},
+			team_id = #{teamId.id},
+			participant_id = #{participantId.id},
+			start_date = #{startDate},
+			end_date = #{endDate},
+			update_by = #{updateBy.id},
+			update_date = #{updateDate},
+			remarks = #{remarks},
+			version = #{version},
+			grade = #{grade},
+			discipline = #{discipline.id},
+			ce = #{ce},
+			bookunit = #{bookunit},
+			chapter = #{chapter},
+			def1 = #{def1},
+			def2 = #{def2},
+			def3 = #{def3},
+			def4 = #{def4},
+			def5 = #{def5}
+		WHERE id = #{id}
+	</update>
+	
+	<update id="delete">
+		UPDATE db_job SET 
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+	
+</mapper>

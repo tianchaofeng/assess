@@ -1,0 +1,81 @@
+#content #breadcate {
+	margin: 0px auto; width: 1004px; height: 20px; line-height: 20px; padding-left: 20px;
+}
+#content #breadcate span {
+	height: 35px; color: rgb(60, 59, 60); line-height: 35px; font-family: "ËÎÌו"; font-size: 14px; float: left; display: block;
+}
+#content #left {
+	top: -10px; width: 220px; height: auto; float: left; position: relative;
+}
+#content #left .leftbox {
+	background: rgb(248, 248, 248); border-radius: 3px; border: 1px solid rgb(217, 234, 254); border-image: none; margin-top: 10px; margin-bottom: 10px; position: relative;
+}
+#content #list_content {
+	margin: 10px auto; width: 1000px; height: auto; overflow: hidden;
+}
+#content #list_content #left .leftbox ul {
+	border: 4px solid rgb(248, 248, 248); border-image: none; width: 210px; height: auto; overflow: hidden;
+}
+#content #list_content #left .leftbox #leftbox_ul1 {
+	padding: 20px 0px 10px;
+}
+#content #list_content #left .leftbox #leftbox_ul1 li {
+	margin: 5px 0px 0px 10px; border: 1px solid rgb(191, 220, 252); border-image: none; width: 85px; height: 23px; text-align: center; line-height: 23px; float: left;
+}
+#content #list_content #left .leftbox #leftbox_ul2 {
+	padding: 20px 0px 10px;
+}
+#content #list_content #left .leftbox #leftbox_ul2 li {
+	background: url("../images/list3.png"); margin: 5px 0px 0px 10px; border: 1px solid rgb(191, 220, 252); border-image: none; width: 185px; height: 27px; text-align: center; line-height: 27px; float: left;
+}
+#content #list_content #left .leftbox #leftbox_ul1 li a {
+	background: url("../images/list_left.png"); color: rgb(26, 82, 136); display: block;
+}
+#content #list_content #left .leftbox #leftbox_ul2 li a {
+	width: 160px; text-align: left; color: rgb(26, 82, 136); padding-left: 30px; margin-left: 20px; display: block;
+}
+#content #list_content #left .leftbox .leftbox_tip {
+	background: url("../images/ico_bg2.png") -71px -14px; left: 30px; top: -3px; width: 157px; height: 25px; text-align: center; color: rgb(255, 255, 255); line-height: 25px; font-family: "ËÎÌו"; font-size: 14px; display: block; position: absolute;
+}
+#content #list_content #left .leftbox #leftbox_ul2 li {
+	float: none;
+}
+#content #list_content #left .leftbox #leftbox_ul2 #open_info {
+	background: url("../images/list4.png"); margin: 10px auto 0px; border: 1px solid rgb(255, 234, 193); border-image: none; width: 185px; height: 85px; clear: both;
+}
+#content #list_content #left .leftbox #leftbox_ul2 #open_info h3 {
+	background: url("../images/ico_bg2.png") -50px -215px; height: 25px; color: rgb(240, 0, 0); line-height: 25px; padding-left: 20px; font-weight: 700; margin-left: 15px;
+}
+#content #list_content #left .leftbox #leftbox_ul2 #open_info #open_info_ul {
+	padding: 0px; border: currentColor; border-image: none; left: -10px; width: 190px; position: relative;
+}
+#content #list_content #left .leftbox #leftbox_ul2 #open_info #open_info_ul li {
+	background: none; padding: 0px; border: currentColor; border-image: none; width: 45px; height: 25px; float: left;
+}
+#content #list_content #left .leftbox #leftbox_ul2 #open_info #open_info_ul li a {
+	padding: 0px; width: 55px; float: left;
+}
+#content #list_content #right .right_list_box {
+	border-radius: 5px; border: 1px solid rgb(217, 234, 254); border-image: none; width: 765px; height: auto; overflow: hidden; margin-bottom: 10px; float: right;
+}
+#content #list_content #right .right_list_box .right_list_top {
+	background: rgb(248, 248, 248); height: 34px; border-bottom-color: rgb(217, 234, 254); border-bottom-width: 1px; border-bottom-style: solid; position: relative;
+}
+#content #list_content #right .right_list_box .right_list_top h3 {
+	background: rgb(255, 255, 255); width: 90px; height: 33px; text-align: center; color: rgb(0, 126, 214); line-height: 34px; margin-left: 40px; border-top-color: rgb(58, 141, 221); border-left-color: rgb(217, 234, 254); border-top-width: 2px; border-left-width: 1px; border-top-style: solid; border-left-style: solid;
+}
+#content #list_content #right .right_list_box .right_list_news {
+	background: rgb(255, 255, 255); padding: 20px 0px; height: auto; overflow: hidden;
+}
+#content #list_content #right .right_list_box .right_list_news li {
+	background: url("../images/ico_bg.png") no-repeat -50px -246px; height: 30px; line-height: 30px; padding-left: 30px; margin-left: 30px; position: relative;
+}
+#content #list_content #right .right_list_box .right_list_news li a {
+	color: rgb(51, 51, 51); font-size: 14px;
+}
+#content #list_content #right .right_list_box .right_list_top .more {
+	top: 10px; right: 30px; color: rgb(51, 51, 51); position: absolute;
+}
+#content #list_content #right .right_list_box .right_list_news ul li .time {
+	top: 0px; right: 40px; color: rgb(153, 153, 153); position: absolute;
+}

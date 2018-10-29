@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<name>viewDetail</name>
+	<filePath>src/main/webapp/WEB-INF/views/${lastPackageName}/${moduleName}/${subModuleName}</filePath>
+	<fileName>${className}Detail.jsp</fileName>
+	<content><![CDATA[
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ include file="/WEB-INF/views/include/taglib.jsp"%>
+<html>
+<head>
+	<title>${functionNameSimple}详细</title>
+	<meta name="decorator" content="default"/>
+	<script type="text/javascript">
+	</script>
+</head>
+<body>
+	
+	<form:form id="inputForm" modelAttribute="${className}" class="form-horizontal">
+		<form:hidden path="id"/>
+		<sys:message content="${r"${message}"}"/>		
+		<#list table.columnList as c>
+			<#if c.isEdit?? && c.isEdit == "1" && (c.isNotBaseField || c.simpleJavaField == 'remarks')>
+		<div class="control-group">
+			<label class="control-label">${c.comments}：</label>
+			<div class="controls">
+			<#if c.showType == "input">
+				<label class="lbl">${"$"}{${className}.${c.javaFieldId}}</label>
+			<#elseif c.showType == "textarea">
+				<label class="lbl">${"$"}{fns:unescapeHtml(${className}.${c.javaFieldId})}</label>
+			<#elseif c.showType == "select">
+				<label class="lbl">${"$"}{fns:getDictLabel(${className}.${c.javaFieldId},'${c.dictType}','')}</label>
+			<#elseif c.showType == "checkbox">
+				<label class="lbl">${"$"}{fns:getDictLabels(${className}.${c.javaFieldId},'${c.dictType}','')}</label>
+			<#elseif c.showType == "radiobox">
+				<label class="lbl">${"$"}{fns:getDictLabel(${className}.${c.javaFieldId},'${c.dictType}','')}</label>
+			<#elseif c.showType == "dateselect">
+				<label class="lbl"><fmt:formatDate value="${"$"}{${className}.${c.javaFieldId}}" pattern="yyyy-MM-dd HH:mm:ss"/></label>
+			<#elseif c.showType == "userselect">
+				<label class="lbl">${"$"}{${className}.${c.javaFieldName}}</label>
+			<#elseif c.showType == "officeselect">
+				<label class="lbl">${"$"}{${className}.${c.javaFieldName}}</label>
+			<#elseif c.showType == "areaselect">
+				<label class="lbl">${"$"}{${className}.${c.javaFieldName}}</label>
+			<#elseif c.showType == "fileselect">
+				<form:hidden id="${c.simpleJavaField}" path="${c.javaFieldId}" htmlEscape="false"<#if c.dataLength != "0"> maxlength="${c.dataLength}"</#if> class="input-xlarge"/>
+				<sys:ckfinder input="${c.simpleJavaField}" type="files" uploadPath="/${moduleName}<#if subModuleName != "">/${subModuleName}</#if>/${className}" selectMultiple="true" readonly="true"/>
+			<#elseif c.showType == "Custom">
+				<label class="lbl">${"$"}{${className}.${c.javaFieldName}}</label>
+			</#if>
+			<#if c.isNull != "1">
+				<span class="help-inline"><font color="red">*</font> </span>
+			</#if>
+			</div>
+		</div>
+			</#if>
+		</#list>
+		<div class="form-actions">
+			<input id="btnPrint" class="btn btn-primary" type="button" value="打印" onclick="window.print()"/>&nbsp;
+			<input id="btnCancel" class="btn" type="button" value="返 回" onclick="history.go(-1)"/>
+		</div>
+	</form:form>
+</body>
+</html>]]>
+	</content>
+</template>

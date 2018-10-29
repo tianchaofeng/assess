@@ -1,0 +1,15 @@
+* {
+	margin: 0px; padding: 0px;
+}
+a {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+body {
+	font-size: 12px;
+}
+img {
+	border: currentColor; border-image: none;
+}

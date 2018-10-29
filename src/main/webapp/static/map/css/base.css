@@ -1,0 +1,213 @@
+body {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+html {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+div {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+ul {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+li {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+iframe {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+dd {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+dl {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+dt {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+p {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+img {
+	margin: 0px; padding: 0px; border: currentColor; border-image: none;
+}
+body {
+	width: 100%; height: 100%; overflow: hidden;
+}
+html {
+	width: 100%; height: 100%; overflow: hidden;
+}
+body {
+	color: rgb(0, 0, 0); font-family: "Î¢ÈíÑÅºÚ"; font-size: 12px;
+}
+@media screen and (max-width:1024px)
+{
+#code_area {
+	display: none !important;
+}
+#code_open {
+	display: none !important;
+}
+#drag {
+	display: none !important;
+}
+}
+.clearfix {
+	display: block; -ms-zoom: 1;
+}
+.clearfix::after {
+	height: 0px; clear: both; display: block; visibility: hidden; content: ".";
+}
+#header {
+	width: 100%; height: 50px; position: absolute; background-color: rgb(0, 117, 199);
+}
+#header .logo {
+	height: 34px; margin-top: 6px; margin-left: 20px; float: left;
+}
+#content {
+	top: 50px; width: 100%; bottom: 0px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid; position: absolute;
+}
+#menu {
+	height: 100%; border-right-color: rgb(233, 233, 233); border-right-width: 1px; border-right-style: solid; float: left; -ms-overflow-y: scroll; min-width: 280px;
+}
+#menu ul {
+	padding: 0px 10px; font-family: "Î¢ÈíÑÅºÚ"; font-size: 14px; background-color: rgb(247, 249, 253);
+}
+#menu ul li {
+	list-style: none; padding: 15px 10px; border-bottom-color: rgb(233, 233, 233); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#menu > ul > li > a {
+	width: 100%; height: 21px; color: rgb(0, 0, 0); text-decoration: none; display: block;
+}
+#menu ul li:last-child {
+	border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+#menu .submenu a {
+	margin: 0px; width: 100%; height: 35px; color: rgb(0, 0, 0); text-decoration: none; display: block;
+}
+#menu .submenu {
+	width: 100%; margin-top: 10px; margin-left: 6px; z-index: 9999;
+}
+#menu .submenu {
+	display: none;
+}
+#menu .submenu dl {
+	list-style-type: square;
+}
+#menu .submenu dl dd {
+	height: 35px; line-height: 35px; font-size: 14px;
+}
+#menu .submenu dl dd::before {
+	margin: -15px 0px 0px; width: 10px; height: 33px; border-bottom-color: rgb(176, 181, 194); border-left-color: rgb(176, 181, 194); border-bottom-width: 1px; border-left-width: 1px; border-bottom-style: dotted; border-left-style: dotted; float: left; display: inline-block; content: "";
+}
+#menu .submenu dl dd a {
+	margin-left: 11px;
+}
+#menu ul li a:hover {
+	cursor: pointer;
+}
+#code_close {
+	cursor: pointer;
+}
+#code_open {
+	cursor: pointer;
+}
+#d_clip_button {
+	cursor: pointer;
+}
+#code_area #d_menu > div > a:hover {
+	font-weight: bold; cursor: pointer;
+}
+#openbar > p {
+	line-height: 36px; margin-left: 10px;
+}
+#menu a:hover {
+	color: rgb(0, 117, 199) !important;
+}
+.clickState {
+	color: rgb(0, 117, 199) !important;
+}
+#menu .submenu dl dd a::before {
+	font-size: 27px; margin-right: 1px; margin-left: 2px; float: left; content: "¡¤";
+}
+#menu i {
+	width: 13px; height: 13px; margin-top: 4px; margin-right: 7px; float: left; display: block;
+}
+#menu .t_close {
+	background: url("img/result.png") no-repeat 0px -96px;
+}
+#menu .t_open {
+	background: url("img/result.png") no-repeat 0px -119px;
+}
+#code_area {
+	width: 500px; height: 100%; float: left; position: relative; z-index: 999; box-shadow: 3px 0px 6px rgba(0,0,0,0.1); -webkit-user-select: none;
+}
+#code_area #myresource {
+	border: currentColor; border-image: none; width: 100%; height: 350px;
+}
+#code_area #openbar {
+	background: url("img/bg-footbar.gif") repeat-x rgb(246, 246, 246); padding: 0px; height: 36px; overflow: hidden; -webkit-user-select: none; -moz-user-select: none;
+}
+#code_area #openbar span.split {
+	color: rgb(0, 0, 0); line-height: 36px; text-decoration: none;
+}
+#code_area #openbar > a {
+	color: rgb(0, 0, 0); line-height: 36px; text-decoration: none;
+}
+#code_area #openbar .f-r {
+	padding: 0px 0px 0px 20px; color: rgb(0, 131, 214); line-height: 36px;
+}
+#code_area #openbar .on {
+	background: url("img/tab.png") no-repeat 0px 7px; color: rgb(0, 131, 214);
+}
+#code_area #d_menu {
+	width: 195px; float: right;
+}
+#code_area #d_menu div {
+	margin-right: 7px; float: left;
+}
+#code_area #d_menu i {
+	margin-top: 11px; margin-right: 3px; float: left; display: block;
+}
+#code_area #d_menu div a {
+	line-height: 36px; padding-bottom: 2px; text-decoration: none;
+}
+#code_area #d_clip_container a {
+	background: url("img/result.png") no-repeat 0px 2px; color: rgb(49, 137, 243); padding-left: 15px;
+}
+#code_area #d_run_container a {
+	background: url("img/result.png") no-repeat 0px -23px; color: rgb(49, 137, 243); padding-left: 17px;
+}
+#code_area #d_refresh_container a {
+	background: url("img/result.png") no-repeat 0px -47px; color: rgb(49, 137, 243); padding-left: 20px;
+}
+#code_area #d_help_container a {
+	background: url("img/result.png") no-repeat 0px -71px; color: rgb(49, 137, 243); padding-left: 17px;
+}
+#code_close {
+	background: url("img/result.png") no-repeat 0px -142px; top: 50%; width: 14px; height: 90px; right: 0px; margin-top: -45px; display: none; position: absolute; z-index: 9999;
+}
+#code_open {
+	background: url("img/result.png") no-repeat 0px -242px; top: 50%; width: 14px; height: 90px; margin-top: -45px; display: none; position: absolute; z-index: 9999;
+}
+#overiframe {
+	width: 100%; height: 100%; display: none; position: absolute; z-index: 999; -webkit-user-select: none;
+}
+#mapContent {
+	height: 100%; overflow: hidden; border-left-color: rgb(233, 233, 233); border-left-width: 1px; border-left-style: solid; position: relative;
+}
+#mapContent #container {
+	overflow: hidden; -webkit-user-select: none;
+}
+.CodeMirror {
+	top: 33px; width: 100%; bottom: 0px; font-family: Consolas,monaco,"Courier New", Courier, monospace; position: absolute;
+}
+.CodeMirror pre {
+	line-height: 1.5em;
+}
+.CodeMirror-sizer {
+	padding-left: 2px;
+}
+#drag {
+	background: rgb(238, 238, 238); width: 2px; height: 100%; float: left; cursor: w-resize;
+}

@@ -1,0 +1,42 @@
+#content #show_content {
+	margin: 10px auto; width: 1000px; height: auto; overflow: hidden;
+}
+#content #breadcate {
+	margin: 0px auto; width: 1004px; height: 35px; padding-left: 20px;
+}
+#content #breadcate span {
+	height: 35px; color: rgb(60, 59, 60); line-height: 35px; font-family: "ËÎÌו"; font-size: 14px; float: left; display: block;
+}
+#content #show_content #left #show_left_title {
+	background: url("../images/list.png"); height: 37px; color: rgb(102, 102, 102); line-height: 37px; padding-left: 20px; font-family: "ËÎÌו"; font-size: 14px; border-bottom-color: rgb(255, 255, 255); border-bottom-width: 1px; border-bottom-style: solid;
+}
+#content #show_content #left {
+	border: 1px solid rgb(228, 228, 228); border-image: none; width: 250px; height: auto; overflow: hidden; float: left;
+}
+#content #show_content #left #show_left_list {
+	background: rgb(255, 255, 255); height: auto; overflow: hidden; padding-bottom: 10px; border-top-color: rgb(228, 228, 228); border-top-width: 1px; border-top-style: solid;
+}
+#content #show_content #left #show_left_list li {
+	height: 25px; color: rgb(153, 153, 153); line-height: 25px; margin-left: 20px;
+}
+#content #show_content #left #show_left_list li a {
+	color: rgb(77, 77, 77);
+}
+#content #show_content #right {
+	background: url("../images/article.png") repeat-x rgb(255, 255, 255); border-radius: 3px; border: 1px solid rgb(228, 228, 228); border-image: none; width: 730px; height: auto; overflow: hidden; margin-bottom: 50px; float: right;
+}
+#content #show_content #right h1 {
+	height: 50px; text-align: center; line-height: 50px; font-family: "ËÎÌו"; font-size: 16px;
+}
+#content #show_content #right #article_info {
+	margin: 15px auto; width: 600px; height: 30px; line-height: 30px; border-top-color: rgb(228, 228, 228); border-bottom-color: rgb(228, 228, 228); border-top-width: 1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid;
+}
+#content #show_content #right #article_info p {
+	height: 30px; padding-left: 100px;
+}
+#content #show_content #right .arc {
+	margin: 0px auto 10px; width: 90%; color: rgb(63, 63, 63); line-height: 1.8em; text-indent: 2em; font-size: 14px;
+}
+#content #show_content #right #social_btn {
+	background: url("../images/qq.png"); margin: 10px auto; width: 194px; height: 17px; display: block;
+}
