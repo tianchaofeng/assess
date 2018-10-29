@@ -1,27 +1,3 @@
-# EziCloud 企业信息化快速开发平台
-
-## 平台简介
-
-EziCloud是基于多个优秀的开源项目，高度整合封装而成的高效，高性能，强安全性的**开源**Java EE快速开发平台。
-
-EziCloud本身是以Spring Framework为核心容器，Spring MVC为模型视图控制器，MyBatis为数据访问层，
-Apache Shiro为权限授权层，Ehcahe对常用数据进行缓存，Activit为工作流引擎。
-
-EziCloud主要定位于企业信息化领域，已内置企业信息化系统的基础功能和高效的**代码生成**工具，
-包括：系统权限组件、数据权限组件、数据字典组件、核心工具组件、视图操作组件、工作流组件、代码生成等。
-前端界面风格采用了结构简单、性能优良、页面美观大气的Twitter Bootstrap页面展示框架。
-采用分层设计、双重验证、提交数据安全编码、密码加密、访问验证、数据权限验证。
-使用Maven做项目管理，提高项目的易开发性、扩展性。
-
-EziCloud目前包括以下三大模块，系统管理（SYS）模块、
-内容管理（CMS）模块、在线办公（OA）模块、代码生成（GEN）模块。 **系统管理模块** ，包括企业组织架构（用户管理、机构管理、区域管理）、
-菜单管理、角色权限管理、字典管理等功能； **内容管理模块** ，包括内容管理（文章、链接），栏目管理、站点管理、
-公共留言、文件管理、前端网站展示等功能； **在线办公模块** ，提供简单的请假流程实例。
-
-EziCloud 提供了常用工具进行封装，包括日志工具、缓存工具、服务器端验证、数据字典、当前组织机构数据
-（用户、机构、区域）以及其它常用小工具等。另外还提供一个强大的在线 **代码生成** 工具，
-此工具提供简单的单表、一对多、树结构功能的生成，如果对外观要求不是很高，生成的功能就可以用了。
-如果你使用了EziCloud基础框架，就可以很高效的快速开发出，优秀的信息管理系统。
 
 ## 内置功能
 
@@ -35,7 +11,6 @@ EziCloud 提供了常用工具进行封装，包括日志工具、缓存工具�
 8.	连接池监视：监视当期系统数据库连接池状态，可进行分析SQL找出系统性能瓶颈。
 9.	工作流引擎：实现业务工单流转、在线流程设计器。
 
-## 为何选择EziCloud
 
 1. 使用 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) 协议，源代码完全开源，无商业限制。
 2. 使用目前主流的Java EE开发框架，简单易学，学习成本低。
@@ -111,48 +86,7 @@ EziCloud 提供了常用工具进行封装，包括日志工具、缓存工具�
 2. 用一段时间提示内存溢出，请修改JVM参数：-Xmx512m -XX:MaxPermSize=256m
 3. 为什么新建菜单后看不到新建的菜单？因为授权问题，菜单管理只允许最高管理员账号管理（最高管理员默认账号：Starsoft 密码：admin）。
 
-## 更多文档
-
-* <http://www.stars-soft.com/tree/master/doc>
-
-## 如何交流、反馈、参与贡献？
-
-* QQ Group：127515876 &nbsp; 209330483 &nbsp; 223507718
-* E-mail：Starsoft@163.com
-* GitHub：<http://www.stars-soft.com>
-* 开源中国：<http://git.oschina.net/Starsoft/EziCloud>
-* 官方网址：<http://EziCloud.com>  论坛：<http://bbs.EziCloud.com>
-* 捐赠支持EziCloud（支付宝）：[Starsoft@163.com](http://EziCloud.com/donation.html)
 
 一个人的个人能力再强，也无法战胜一个团队，希望兄弟姐妹的支持，能够贡献出自己的部分代码，参与进来共同完善它(^_^)。
 
-怎么共享我的代码：[手把手教你如何加入到github的开源世界！](http://www.cnblogs.com/wenber/p/3630921.html)
 
-## 版权声明
-
-本软件使用 [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0) 协议，请严格遵照协议内容：
-
-1. 需要给代码的用户一份Apache Licence。
-2. 如果你修改了代码，需要在被修改的文件中说明。
-3. **在延伸的代码中（修改和有源代码衍生的代码中）需要带有原来代码中的协议，商标，专利声明和其他原来作者规定需要包含的说明。**
-4. 如果再发布的产品中包含一个Notice文件，则在Notice文件中需要带有Apache Licence。你可以在Notice中增加自己的许可，但不可以表现为对Apache Licence构成更改。
-3. Apache Licence也是对商业应用友好的许可。使用者也可以在需要的时候修改代码来满足需要并作为开源或商业产品发布/销售
-
-##为何使用MyBatis
-
-* 学习成本：Hibernate的真正掌握要比Mybatis来得难不少。Mybatis框架相对简单很容易上手，也更加灵活。
-对于学习过Hibernate的用户，学习起MyBatis也更容易上手。
-
-* 开发成本：大家都说Hibernate开发效率高，个人认为MyBatis的开发效率并不比Hibernate低，
-通过代码生成器和封装开发效率不是问题，并且MyBatis可控性比较高，并更易于维护。
-
-* 性能方面：由于Hibernate比较难以掌握，性能方面也成为了Hibernate的问题瓶颈，当然如果你对Hibernate非常熟，
-Hibernate性能上定不是问题。但对于大多数情况下，真正掌握Hibernate的人少之又少，然而的也就造就了项目风险加大。
-
-* 多数据库支持：有些人说MyBatis对多数据库支持困难，我认为这个不是问题，虽说目前EziCloud仅提供对MySql或Oracle
-数据库的支持，但对于支持其它数据库的改动也不是很麻烦，SQL是被专门写在XML中，对于大多数SQL来说都是通用的，
-对于不同的数据库可通过dbName区分和修改各别的SQL片段即可。
-
-上述纯属个人观点，欢迎指正（Starsoft@163.com）。
-
-如果你仍然喜欢Hibernate，请点击[下载EziCloud Hibernate版本](http://www.stars-soft.com/tree/master_hibernate)。
